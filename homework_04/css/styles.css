@@ -1,0 +1,245 @@
+body{
+	background: url(../img/bg-2.png) repeat-x;
+	font-family: Tahoma, sans-serif;
+}
+
+/* MAIN CONTAINER */
+
+.main{
+	overflow: hidden;
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: -1px 1px 30px 0px #031d28,
+								0px 3px 0px 1px #031d28;				
+}
+
+/* HEADER */
+
+.header{
+	color: #128aa7;
+	font-size: 12px;
+}
+
+/* LOGO */
+
+.logo{
+	margin: 11px auto 0px 30px;
+	float: left;
+}
+
+/* ADDRESS */
+
+.address{
+	float: right;
+	margin-right: 30px;
+}
+.address h3,
+.address p{
+	margin: 6px auto;
+}
+
+/* COUNTRIES FLAGS */
+
+.countries{
+	margin: 30px 30px 10px auto;
+	float: right;
+	clear: right;
+}
+.countries li{
+	display: inline-block;
+}
+
+.countries a{
+	display: block;
+	width: 53px;
+	padding-top: 45px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	color: #128aa7;
+	text-align: center;
+	font-size: 10px;
+}
+.india a{
+	background-image: url(../img/india-flag.png);
+}
+.nepal a{
+	background-image: url(../img/nepal-flag.png);
+}
+.tibeth a{
+	background-image: url(../img/tibeth-flag.png);
+}
+.butan a{
+	background-image: url(../img/butan-flag.png);
+}
+.lanka a{
+	background-image: url(../img/lanka-flag.png);
+}
+.maldivi a{
+	background-image: url(../img/maldivi-flag.png);
+}
+
+/* LINES HR */
+
+.top-line,
+.bottom-line{
+	
+	height: 1px;
+	clear: both;
+	margin: 0;
+	border: 0px;
+	background-color: #128aa7;
+	color:  #128aa7;
+}
+.bottom-line{
+	margin-top: -1px;
+}
+
+/* MENU */
+
+.menu{
+	position: relative;
+	z-index: 10;
+	border-top: 1px solid #cacbcb;
+	border-bottom: 1px solid #000;
+	background-color: #313131;
+	box-shadow: 0px 2px 2px 0px #000;
+}
+.menu>li{
+	padding: 10px 30px;
+	float: left;
+}
+.menu>li:first-child{
+	padding-left: 65px;
+}
+.menu>li:last-child{
+	padding-right: 65px;
+}
+.menu span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-image: url(../img/triangl.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.menu a{
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+/* DROPDOWN MENU */
+
+ul li ul {
+	display: none;
+	position: absolute;
+	top: 37px;
+	width: 150px;
+	margin-left: -10px;
+	padding: 5px 10px;
+	background: #313131;
+	color: #fff;
+	box-shadow: 0px 5px 5px 0px #000;
+}
+
+ul li ul li {
+	display: block;
+	padding: 5px;
+	float: none;
+	background: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+ul li:hover ul {
+	display: block;
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear:both;
+}
+
+h2{
+	margin: 10px;
+	color: #424c43;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* COLOMNS WITH EQUAL */
+
+.info{
+	position: relative;
+	overflow: hidden;
+	left: 79%;
+	width: 21%;
+	float: left;
+	font-size: 14px;
+}
+
+.news{
+	position: relative;
+	overflow: hidden;
+	left: 79%;
+	width: 21%;
+	float: right;
+	font-size: 14px;	
+}
+
+.info ul,
+.news ul{
+	padding-left: 15px;
+}
+
+.news li,
+.info li{
+	margin-bottom: 10px;
+	color: #424c43;
+}
+
+.content{
+	position: relative;
+	overflow: hidden;
+	left: 75%;
+	width: 58%;
+	float: left;
+	font-size: 14px;
+}
+
+.wrapper-left{
+	position: relative;
+	right: 58%;
+	width: 100%;
+	float: left; 
+	background: #edeef0;
+	border-right: 1px solid #c7cacf;
+}
+
+.wrapper-center{
+	position: relative;
+	right: 21%;
+	width: 100%;
+	float: left;
+	background: #fff;
+	border-right: 1px solid #c7cacf;
+}
+
+.wrapper-right{
+	width: 100%;
+	float: left;
+	background: #edeef0;
+	border-right: 1px solid #c7cacf;
+}
+
+/* FOOTER */
+
+.footer{
+	margin: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+}
