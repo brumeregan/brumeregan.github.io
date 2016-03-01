@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test menu</title>
+	<style>
+	body{
+		background: #ccc;
+	}
+
+	.menu-sm{
+		position: absolute;
+		display: none;
+		/*opacity: 0;*/
+			width: 245px;
+		margin: 0 auto;
+		border: 1px solid #051116;
+		border-radius: 7px;
+		z-index: 10;
+		left: 50%;
+		/*right: 50%;*/
+		transform: translate(-47%);
+		background: rgba(54, 41, 62, 0.9);
+		
+	}
+
+	.menu-sm .menu__item{
+		display: block;
+		border-top: 1px solid #624b6c;
+		border-bottom: 1px solid #36283e;
+		text-align: center;
+		
+	}
+
+	.menu-sm .menu__link{
+		padding: 9px 3px 6px;
+		
+	}
+
+	.menu-sm .menu__link:hover{
+		background: rgba(51, 51, 51, 0.7);
+	}
+
+
+	.button-menu-sm{
+		display: block;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.button-menu-sm a{
+		display: inline-block;
+		padding: 5px 1px 3px 1px; /*attention*/
+		border-bottom: 2px solid #edbfff;
+		color: #fff;
+		text-transform: uppercase;
+		/*text-align: center;*/
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+		font-size: 24px;
+	}
+
+	.dropdown-menu li:hover ul.menu.menu-sm{
+		display: block;
+	}
+
+	
+
+/* DROPDOWN MENU */
+
+ul li ul {
+	/*display: none;*/
+	/*position: absolute;*/
+	/*top: 37px;
+	width: 150px;
+	margin-left: -10px;
+	padding: 5px 10px;
+	background: #313131;
+	color: #fff;
+	box-shadow: 0px 5px 5px 0px #000;*/
+}
+
+ul li ul li {
+	/*display: block;*/
+	/*padding: 5px;*/
+	/*float: none;*/
+	/*background: none;*/
+	/*cursor: pointer;*/
+	/*font-size: 14px;*/
+}
+/*
+ul li:hover a{
+	display: block;
+	color: red;
+
+}
+*/
+	</style>
+
+</head>
+<body>
+	
+	<nav class="clearfix">
+
+	
+	<ul class="dropdown-menu">
+		<li class="button-menu-sm">
+			<a href="#" class="">Home</a>
+			<ul class="menu menu-top menu-sm">
+				<li class="menu__item">
+					<a href="#" class="menu__link ">Home</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">About</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Blog</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Products</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Lorem ipsum</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Dolor sit amet</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="button-menu-sm">
+		<li>
+			<a href="#" class="">Home</a>
+		</li>
+	</ul>
+
+</nav>
+
+<ul>
+	<li class="first">
+	<a href="#">1
+		<ul>
+			<li class="drop"><a href="#">231</a></li>
+			<li class="drop"><a href="#">232</a></li>
+		</ul>
+	</a></li>
+	<li class="other"><a href="#">2</a></li>
+	<li class="other"><a href="#">3</a></li>
+	<li class="other"><a href="#">4</a></li>
+	<li class="other"><a href="#">5</a></li>
+</ul>
+
+	
+</body>
+</html>
