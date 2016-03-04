@@ -4,7 +4,7 @@
 	font-family: "League Gothic";
 	src: url('../font/league-gothic.regular.ttf'),
 			 url('../font/league-gothic.regular-webfont.woff'),
-			 url('../font/opensans-extrabold-webfont.eot');
+			 url('../font/league-gothic.regular-webfont.eot');
 }
 
 @font-face{

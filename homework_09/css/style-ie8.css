@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "League Gothic";
-	src: url('../font/opensans-extrabold-webfont.eot');
-	 src: url("../font/opensans-extrabold-webfont.eot?#iefix") format("embedded-opentype")
+	src: url('../font/league-gothic.regular-webfont.eot');
+	 src: url("../font/league-gothic.regular-webfont.eot?#iefix") format("embedded-opentype")
 }
 
 @font-face{
