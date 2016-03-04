@@ -19,8 +19,13 @@
 }
 
 header{
+	box-sizing: border-box;
+	position: relative;
 		height: 846px;
 		padding-top: 68px;
+
+		background: url('../img/bg-high.jpg') center center no-repeat;
+	background-size: cover;
 	}
 
 	.logo{
