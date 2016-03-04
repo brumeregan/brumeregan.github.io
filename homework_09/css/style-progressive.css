@@ -105,6 +105,7 @@ header{
 	position: relative;
 	margin-top: 123px;
 	margin-left: 45px;
+	z-index: 40;
 }
 
 .head__article{
@@ -566,6 +567,8 @@ footer{
 	.first-screen{
 		margin-top: 20px;
 		margin-left: 0;
+
+		z-index: 40;
 	}
 
 	.header__img{
@@ -770,6 +773,8 @@ footer{
 	.first-screen{
 		margin-top: 48px;
 		margin-left: 24px;
+
+		z-index: 40;
 	}
 
 	.head-article{
@@ -1015,6 +1020,7 @@ footer{
 	.first-screen{
 		margin-top: 150px;
 		margin-left: 0;
+		z-index: 40;
 	}
 
 	.head-article{
