@@ -18,15 +18,15 @@
 	padding: 0;
 }
 
-header{
+.header{
 	box-sizing: border-box;
 	position: relative;
-		height: 846px;
-		padding-top: 68px;
+	height: 846px;
+	padding-top: 68px;
 
-		background: url('../img/bg-high.jpg') center center no-repeat;
+	background: url('../img/bg-high.jpg') center center no-repeat;
 	background-size: cover;
-	}
+}
 
 	.logo{
 		float: left;
@@ -118,7 +118,7 @@ header{
 		right: -10%;
 	}
 
-	header:after{
+	.header:after{
 		content: '';
 		display: block;
 		position: absolute;
@@ -322,7 +322,7 @@ header{
 		margin-bottom: 53px;
 	}
 
-	footer{
+	.footer{
 		height: 74px;
 		padding-top: 40px;
 	}
