@@ -51,7 +51,7 @@ a{
 	padding-top: 30px; 
 
 	background: url('../img/bg-high.jpg') no-repeat;
-	/*background-size: cover;*/
+	background-size: cover;
 }
 
 	.logo{
@@ -340,9 +340,6 @@ a{
 		text-shadow: 1px 1px #fff;
 	}
 
-	/*.story p{
-		height: ;
-	}*/
 
 	.category{
 		margin-bottom: 53px;
@@ -385,3 +382,28 @@ a{
 		font-style: italic;
 		/*text-shadow: 1px 1px #fff;*/
 	}
+
+
+	/*MENU*/
+
+.menu__item{
+	display: inline-block;
+}
+
+.menu__link{
+	display: block;
+	padding: 5px 1px 3px 1px;
+	border-bottom: 2px solid transparent;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.menu__link:last-child{
+	padding-right: 0;
+}
+
+.menu__link:hover{
+	border-bottom: 2px solid #edbfff;
+}
+
