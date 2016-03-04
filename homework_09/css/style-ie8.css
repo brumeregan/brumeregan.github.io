@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "League Gothic";
+	src: url('../font/opensans-extrabold-webfont.eot');
+}
+
+@font-face{
+	font-family: "Open Sans Light";
+	src: url('../font/opensans-light-webfont.eot');
+}
+
+@font-face {
+	font-family:"Open Sans ExtraBold";
+	src: url('../font/opensans-extrabold-webfont.eot');
+}
 
 .wrapper{
 	max-width: 960px;
