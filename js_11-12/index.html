@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS 11-12</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+	<script src="js/jquery-carousel.js"></script>
+
+	<script src="js/tmpl.js"></script>
+
+	<script src="js/js.js"></script>
+</head>
+<body>
+
+<button id="first-part">Первая часть дз</button>
+
+	<!-- carousel plagin -->
+<div class='carousel-block clearfix'>
+<div class="carousel__control carousel-arrow-left"><span>Prev</span></div>
+
+<div class="carousel__hider">
+	<ul id="mycarousel">
+		<li class="carousel-element"><img src="img/img_1.png">
+			<p>Париж</p>
+		</li>
+		<li class="carousel-element"><img src="img/img_2.jpg">
+			<p>Цветы</p>
+		</li>
+		<li class="carousel-element"><img src="img/img_3.jpg">
+			<p>Котик</p>
+		</li>
+		<li class="carousel-element"><img src="img/img_4.jpg">
+		<p>Воздушеные шары</p></li>
+		<li class="carousel-element"><img src="img/img_5.jpg">
+		<p>Стальной гигант</p></li>
+		<li class="carousel-element"><img src="img/img_6.jpg">
+		<p>Белочки</p></li>
+	</ul>
+</div>
+<div class="carousel__control carousel-arrow-right"><span>Next</span></div>
+</div>
+
+
+
+<button id="second-part">Вторая часть дз</button>
+<!-- template -->
+
+<script type="text/template" id="template">
+	<div class="about">
+		<h2 class="about__header"> <%= name.last %> <%=name.first %> <%= name.middle %> </h2>
+		<p> <%= occupation %></p>
+		<hr>
+		<h3>Мотивация пройти курсы:</h3>
+		<ul>
+			<% for (var i = 0; i < motivation.length; i++){ %>
+			<li><%= motivation[i] %></li>
+			<% } %>
+		</ul>
+		<hr>
+
+		<h3>Контактные данные:</h3>
+		<p>Мой контактный телефон:</p>
+		<span><%= telephone %></span>
+		<p>Cтраница соцсетей:</p>
+		<a href=" <%= social_fb %> " ><%= name.first %> <%= name.last %></a>
+		<hr>
+		<h3>Мой фидбек:</h3>
+		<p><%= feedback %></p>
+
+	</div>
+	
+</script>
+
+</body>
+</html>

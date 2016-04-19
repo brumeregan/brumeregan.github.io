@@ -1,0 +1,95 @@
+body{
+	background: #eee;
+}
+
+.carousel__hider{
+	width: 675px;
+	overflow: hidden;
+	float: left;
+}
+
+.carousel-block{
+	width: 785px;
+	margin: 0 auto;
+}
+
+#mycarousel{
+	position: relative;
+	list-style: none;
+	width: 10000px;
+	padding: 0;
+}
+
+.carousel-element{
+	display: block;
+	margin-right: 25px;
+	float: left;
+	text-align: center;
+}
+
+#mycarousel img{
+	max-width: 200px;
+}
+
+.carousel__control{
+	float: left;
+	cursor:pointer;
+	display: block;
+	border-radius: 4px;
+  background-color: lightgrey;
+  padding: 5px;
+  margin-top: 50px;
+}
+
+.carousel-arrow-left{
+	margin-right: 25px;
+}
+
+.carousel-arrow-right{
+	;
+}
+
+.carousel__control:hover{
+	background: grey;
+}
+
+
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+button{
+	display: block;
+	width: 300px;
+	height: 50px;
+	margin: 10px auto;
+	line-height: 50px;
+	border: 1px solid #cdd;
+	border-radius: 4px;
+	background: #ccc;
+	color: #000;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+button:hover{
+	background: #ddd;
+}
+
+.about{
+	max-width: 512px;
+	margin: 0 auto;
+	padding: 20px 30px;
+	box-shadow: 0px 1px 2px #ccc,
+							1px 0px 2px #ccc,
+							-1px 0px 2px #ccc,
+							0px -1px 2px #ccc;
+	background: #fff;
+
+}
+
+.about__header{
+	text-align: center;
+}

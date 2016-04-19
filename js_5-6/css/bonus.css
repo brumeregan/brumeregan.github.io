@@ -1,0 +1,24 @@
+.box__item{
+	width: 14%;
+	font-size: 10vw;
+	color: #A5DCA5;
+	text-shadow: none;
+}
+
+.box__dots{
+	width: 5%;
+}
+.box__ms{
+	width: 80%;
+	font-size: 3vw;
+	text-align: right;
+}
+
+.info{
+	text-align: center;
+	color: #ffe;
+}
+
+.button-split{
+	background: #A89DF1;
+}

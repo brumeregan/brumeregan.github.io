@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>JS 9-10</title>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+ 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.min.js"></script>
+	<script src="js/jquery.selectbox-0.2.js"></script>
+	<script src="js/jquery.color-2.1.2.js"></script>
+	<script src="js/js.js"></script>
+
+ </head>
+ <body>
+
+<!-- navigation -->
+
+<nav class="nav">
+	<ul class="nav__main clearfix">
+		<li><a href="#">Nav menu 1</a></li>
+		<li class="dropdown"><a href="#">Nav menu 2 <span class="fa fa-caret-down"></span></a>
+			<ul>
+				<li><a href="#">submenu 2-1</a></li>
+				<li><a href="#">submenu 2-2</a></li>
+				<li class="dropdown"><a href="#">submenu 2-3 <span class="fa fa-caret-right"></span></a>
+					<ul>
+						<li><a href="#">submenu 2-3-1</a></li>
+						<li><a href="#">submenu 2-3-2</a></li>
+						<li><a href="#">submenu 2-3-3</a></li>
+						<li class="dropdown"><a href="#">submenu 2-3-4 <span class="fa fa-caret-right"></span></a>
+							<ul>
+								<li><a href="#">submenu 2-3-4-1</a></li>
+								<li><a href="#">submenu 2-3-4-2</a></li>
+								<li><a href="#">submenu 2-3-4-3</a></li>
+								<li><a href="#">submenu 2-3-4-4</a></li>
+								<li><a href="#">submenu 2-3-4-5</a></li>
+							</ul>
+						</li>
+						<li><a href="#">submenu 2-3-5</a></li>
+						<li><a href="#">submenu 2-3-6</a></li>
+					</ul>
+				</li>
+				<li><a href="#">submenu 2-4</a></li>
+				<li><a href="#">submenu 2-5</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Nav menu 3</a></li>
+		<li><a href="#">Nav menu 4</a></li>
+		<li><a href="#">Nav menu 5</a></li>
+	</ul>
+</nav>
+
+ <!-- wrapper -->
+<div class="carousel">
+	<!-- carousel -->
+	<div class="carousel__main-box">
+		<div class="carousel__main-carousel">
+			<ul>
+			 	<li>
+			 		<img src="img/tesla_1.jpg" alt="">
+			 	</li>
+			 	<li>
+			 		<img src="img/tesla_2.jpg" alt="">
+			 	</li>
+			 	<li>
+			 		<img src="img/tesla_3.jpeg" alt="">
+			 	</li>
+			 	<li>
+			 		<img src="img/tesla_4.jpg" alt="">
+			 	</li>
+			 	<li>
+			 		<img src="img/tesla_5.jpg" alt="">
+			 	</li>
+		 </ul>
+
+			<!-- controls -->
+			<a href="#" class="carousel-prev controls-main"> <span class="fa fa-arrow-left fa-2x"></span> </a>
+		 	<a href="#" class="carousel-next controls-main"> <span class="fa fa-arrow-right fa-2x"></span> </a>
+
+		</div>
+	
+	<div class="carousel__nav-box">
+		<div class="carousel__nav-carousel">
+			<ul>
+				<li class="carousel__nav__thumb"><img src="img/thumb_tesla_1.jpg" alt="thumbnail"></li>
+				<li class="carousel__nav__thumb"><img src="img/thumb_tesla_2.jpg" alt="thumbnail"></li>
+				<li class="carousel__nav__thumb"><img src="img/thumb_tesla_3.jpg" alt="thumbnail"></li>
+				<li class="carousel__nav__thumb"><img src="img/thumb_tesla_4.jpg" alt="thumbnail"></li>
+				<li class="carousel__nav__thumb"><img src="img/thumb_tesla_5.jpg" alt="thumbnail"></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+ </div>
+
+ <!-- select -->
+ <div class="order">
+ <form action="">
+	<div class="order__select">
+		<h3>Выберите город</h3>	
+		<select name="selection" id="select">
+		 	<option value="">Выберите город</option>
+			<option value="1">Хельсинки</option>
+			<option value="2">Осло</option>
+			<option value="3">Стокгольм</option>
+			<option value="4">Милан</option>
+			<option value="5">Лондон</option>
+			<option value="6">Мадрид</option>
+		</select>
+	</div>
+
+	<div class="order__checkbox">
+		<fieldset class="jquery__box">
+			<legend>Тип кузова</legend>
+			<div>
+			<span class="jquery__checkbox"><input type="checkbox" id="sedan" checked="true"></span>
+			<label for="sedan">Седан</label>
+			</div>
+			<div>
+			<span class="jquery__checkbox"><input type="checkbox" id="hachback" value="off"></span>
+			<label for="hachback">Хэчбэк</label>
+			</div>
+			<div>
+			<span class="jquery__checkbox"><input type="checkbox" id="jeep"></span>
+			<label for="jeep">Внедорожник</label>
+			</div>	
+		</fieldset>
+		<fieldset class="css__box">
+			<legend>Салон</legend>
+			<div>
+			<input type="checkbox" id="css__sedan" class="css__checkbox">
+			<label for="css__sedan" class="css__label">Кожа</label>
+			</div>
+			<div>
+			<input type="checkbox" id="css__hach" class="css__checkbox">
+			<label for="css__hach" class="css__label">Ткань</label>
+			</div>
+			<div>
+			<input type="checkbox" id="css__jeep" class="css__checkbox">
+			<label for="css__jeep" class="css__label">Эксклюзивные модели</label>
+			</div>
+		</fieldset>
+	</div>
+	<div class="button">
+		<button>Прислать информацию</button>
+	</div>
+	</form>
+	
+ </div>
+ 
+ </body>
+ </html> 
