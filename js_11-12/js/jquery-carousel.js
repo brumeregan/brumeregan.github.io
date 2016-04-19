@@ -13,41 +13,45 @@
 		var $elemList = $(this);
 
 		var $parentWidth = $elemList.parent().outerWidth();
-		var $elemChildrenWidth = $('.carousel-element', $elemList).outerWidth(true);
 
-		//widh of element li plus margin-left-right
-		var $offset = $elemChildrenWidth;
+		$('li').eq(0).find('img').load(function(){
+			var $elemChildrenWidth = $('.carousel-element', $elemList).outerWidth(true);
 
-		var $currentLeft = 0;
+			//widh of element li plus margin-left-right
+			var $offset = $elemChildrenWidth;
 
-		var $elemCount = $elemList.find('li').length;
+			var $currentLeft = 0;
 
-		/* count number of visible items
-		** widthOuterContainer / outerWidthLI
-		 */
+			var $elemCount = $elemList.find('li').length;
 
-		var $countVisibleItem = $parentWidth / $elemChildrenWidth;
+			/* count number of visible items
+			** widthOuterContainer / outerWidthLI
+			 */
 
-		var $minOffset = -(($elemCount - $countVisibleItem) * $offset);
-		var $maxOffset = 0;
+			var $countVisibleItem = $parentWidth / $elemChildrenWidth;
 
-		$arrowLeft.on('click', function(){
-			if($currentLeft != $maxOffset){
-			$currentLeft += $offset;
-			$elemList.animate({
-				left: $currentLeft + 'px'
-			}, settings.speed);
-		}
-		});
+			var $minOffset = -(($elemCount - $countVisibleItem) * $offset);
+			var $maxOffset = 0;
 
-		$arrowRight.on('click', function(){
-			if($currentLeft != $minOffset){
-				$currentLeft -= $offset;
+			$arrowLeft.on('click', function(){
+				if($currentLeft != $maxOffset){
+				$currentLeft += $offset;
 				$elemList.animate({
 					left: $currentLeft + 'px'
 				}, settings.speed);
 			}
-			
+			});
+
+			$arrowRight.on('click', function(){
+				if($currentLeft != $minOffset){
+					$currentLeft -= $offset;
+					$elemList.animate({
+						left: $currentLeft + 'px'
+					}, settings.speed);
+				}
+				
+			});
+
 		});
 
 		return this;
