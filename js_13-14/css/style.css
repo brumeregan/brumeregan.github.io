@@ -1,0 +1,131 @@
+body{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.wrapper{
+	box-sizing: border-box;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px 50px;
+	-webkit-box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+
+}
+
+.button{
+	text-align: center;
+}
+
+.button__item{
+	padding: 10px 20px;
+	border: 1px solid #dfd;
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.button__item:hover{
+	background: #eee;
+}
+
+.question__text{
+	color: #333;
+	cursor: pointer;
+}
+
+.question__text:hover{
+	text-shadow: 1px 1px 1px #afa;
+}
+
+.question__radio{
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+.question__text:before{
+	content: '';
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url('../img/radio-sprite.png');
+	background-position: 0 0;
+	margin-right: 10px;
+}
+
+.question__radio:checked + .question__text:before{
+	background-position: -23px 0px;
+}
+
+.modal{
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.modal .question__text:before{
+	background: none;
+}
+
+.modal__box{
+	box-sizing: border-box;
+	position: relative;
+	width: 600px;
+	min-height: 450px;
+	padding: 40px 60px;
+
+	background: #fff;
+	margin: 0 auto;
+}
+
+.button__bottom{
+	position: absolute;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+}
+
+.modal__title{
+	text-align: center;
+}
+
+.modal__result{
+	margin: 50px auto;
+	text-align: center;
+	font-weight: bolder;
+}
+
+.modal__box label{
+	display: block;
+	cursor: text;
+}
+
+.modal__box label:hover{
+	text-shadow: none;
+}
+
+.correct{
+	color: green;
+}
+
+.incorrect{
+	color: red;
+}
+
+.correct:after{
+	content: ' ✔';
+}
+
+.incorrect:after{
+	content: ' ✖';
+}

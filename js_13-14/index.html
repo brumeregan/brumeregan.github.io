@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript test for 13-14</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+
+	<div class="button">
+		<button id="local" class="button__item">Закешировать тест</button>
+		<button id="begin__test" class="button__item">Начать тест</button>
+		<button id="clear" class="button__item">Очистить localStorage</button>
+	</div>
+		<script type="text/template" id="questions">
+
+		<% for(var i = 0; i < data.questions.length; i++){ %>
+		<div class="question__item">
+			<h3 class="question__title"><%= data.questions[i].title %></h3>
+			
+			<% for (var j = 0; j < data.questions[i].answers.length; j++) {%>
+			<div>
+				
+				<input type="radio" class="question__radio" name="quest__<%= i %>" id="<%= i %>-<%= j %>">
+				<label for="<%= i %>-<%= j %>" class="question__text"><%= data.questions[i].answers[j].text %></label>
+				
+			</div>
+			<% } %>
+				<hr>
+			</div>
+		<% } %>
+		</script>
+
+		<div id="question-block"></div>
+
+		<div id="modal__window" class="modal">
+			<div class="modal__box">
+				<h2 class="modal__title">Результаты теста:</h2>
+				<div class="modal__content"></div>
+				<div class="button button__bottom">
+					<button class="again button__item">Пройти снова</button>
+					<button class="close button__item">Close</button>
+				</div>
+			</div>
+		</div>
+	<div class="button">
+		<button class="check button__item" hidden>Проверить</button>
+	</div>
+
+	</div>
+
+	<script src="js/tmpl.js"></script>
+	<script src="js/local.js"></script>
+	<script src="js/js.js"></script>
+</body>
+</html>
