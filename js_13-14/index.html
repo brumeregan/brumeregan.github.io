@@ -8,13 +8,12 @@
 <body>
 	<div class="wrapper">
 
-	<div class="button">
+	<div class="button button__top">
 		<button id="local" class="button__item">Закешировать тест</button>
 		<button id="begin__test" class="button__item">Начать тест</button>
-		<button id="clear" class="button__item">Очистить localStorage</button>
 	</div>
 		<script type="text/template" id="questions">
-
+			<h1 class="question__maintitle"><%= data.title %></h1>
 		<% for(var i = 0; i < data.questions.length; i++){ %>
 		<div class="question__item">
 			<h3 class="question__title"><%= data.questions[i].title %></h3>
@@ -39,13 +38,13 @@
 				<h2 class="modal__title">Результаты теста:</h2>
 				<div class="modal__content"></div>
 				<div class="button button__bottom">
-					<button class="again button__item">Пройти снова</button>
+					<button class="again button__item button__check">Пройти снова</button>
 					<button class="close button__item">Close</button>
 				</div>
 			</div>
 		</div>
 	<div class="button">
-		<button class="check button__item" hidden>Проверить</button>
+		<button class="check button__item button__check" hidden>Проверить</button>
 	</div>
 
 	</div>

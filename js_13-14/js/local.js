@@ -1,6 +1,7 @@
 'use strict';
 
-var data = { 
+var data = {
+	"title": "Тест 1",
 	"questions": [ 
 		{ 
 			
@@ -69,18 +70,13 @@ var data = {
 
 var info = JSON.stringify(data);
 var buttonLocal = document.getElementById('local');
-var buttonClear = document.getElementById('clear');
+// var buttonClear = document.getElementById('clear');
 buttonLocal.addEventListener('click', function(e){
 	e.preventDefault();
 	try{
 		localStorage.setItem("test", info);
-		alert("Закешировалось");
+		window.alert("Закешировалось");
 	}catch(error){
-		alert('что-то пошло не так по причине' + error + error.message);
+		window.alert('что-то пошло не так по причине' + error + error.message);
 	}
-});
-
-buttonClear.addEventListener('click', function(e){
-	e.preventDefault();
-	localStorage.removeItem("test");
 });

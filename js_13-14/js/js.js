@@ -3,102 +3,122 @@ document.addEventListener('DOMContentLoaded', ready);
 
 function ready(){
 
-/* link to elements */
-var buttonBegin = document.getElementById('begin__test');
-var button = document.querySelector('.check');
-var buttonRetry = document.querySelector('.again');
-var buttonClose = document.querySelector('.close');
-var modalContent = document.querySelector('.modal__content');
+	/* link to elements */
+	var buttonBegin = document.getElementById('begin__test');
+	var buttonCheck = document.querySelector('.check');
+	var buttonRetry = document.querySelector('.again');
+	var buttonClose = document.querySelector('.close');
+	var modalContent = document.querySelector('.modal__content');
+	var buttonTop = document.querySelector('.button__top');
 
-/* events */
+	/* events */
 
-buttonBegin.addEventListener('click', showTest);
+	buttonBegin.addEventListener('click', showTest);
+	buttonCheck.addEventListener('click', checkAnswers);
+	buttonRetry.addEventListener('click', tryAgain);
+	buttonClose.addEventListener('click', closeTest);
 
-button.addEventListener('click', checkAnswers);
+	/* variables */
+	var objQuestions;
+	var result = 0;
+	var neededNum;
 
-buttonRetry.addEventListener('click', tryAgain);
+	function checkAnswers(){
+		var resArr = [];
+		var input = document.querySelectorAll('input[type=radio]:checked');
 
-buttonClose.addEventListener('click', closeTest);
+		for(var i = 0; i < input.length; i++){
+			var tmp = input[i].getAttribute('id').split('-');
 
-/* variables */
-var objQuestions;
-var result = 0;
-var neededNum;
+			var correct = objQuestions.questions[tmp[0]].answers[tmp[1]].correct;
 
-function checkAnswers(){
-	var resArr = [];
-	var input = document.querySelectorAll('input[type=radio]:checked');
+			if(input[i].checked == correct){
+				input[i].nextElementSibling.classList.add('correct');
+				resArr.push(input[i].nextElementSibling);
+				result++;
 
-	for(var i = 0; i < input.length; i++){
-		var tmp = input[i].getAttribute('id').split('-');
+			} else{
+				input[i].nextElementSibling.classList.add('incorrect');
+				resArr.push(input[i].nextElementSibling);
+			}
+		}
 
-		var correct = objQuestions.questions[tmp[0]].answers[tmp[1]].correct;
+		modalWindow(resArr);
+	}
 
-		if(input[i].checked == correct){
-			input[i].nextElementSibling.classList.add('correct');
-			resArr.push(input[i].nextElementSibling);
-			result++;
+	function modalWindow(array){
+		var contentBlock = document.querySelector('.modal__content');
+		for(var i = array.length - 1; i >=0; i--){
+			var clone = array[i].cloneNode(true);
 
+			contentBlock.insertAdjacentElement('afterBegin', clone);
+		}
+		contentBlock.appendChild(checkingTest(result, neededNum));
+		contentBlock.appendChild(showScore(result, neededNum));
+
+		document.getElementById('modal__window').style.display = 'block';
+	}
+
+	function showScore(score, total){
+		var content = document.createElement('p');	
+		content.classList.add('modal__result');
+		content.innerHTML = 'Bаш результат ' + score + ' из ' + total;
+		return content;
+	}
+
+	function checkingTest(score, total){
+		var testCheck = document.createElement('p');
+		testCheck.classList.add('modal__check')
+		if(score == total){
+			testCheck.innerHTML = 'Поздравляю, вы успешно прошли тест!'
+		} else if( score == 0 ){
+			testCheck.innerHTML = 'Вы не ответили правильно ни на один вопрос, попробуйте еще раз.';
 		} else{
-			input[i].nextElementSibling.classList.add('incorrect');
-			resArr.push(input[i].nextElementSibling);
+			testCheck.innerHTML = 'У вас есть ошибки. Пропробуйте еще раз.';
+		}
+
+		return testCheck;
+	}
+
+
+	function tryAgain(){
+		if(modalContent.children){
+			modalContent.innerHTML = '';
+		}
+		result = 0;
+		document.getElementById('modal__window').style.display = 'none';
+
+		showTest();
+	}
+
+	function closeTest(){
+		try{
+			tryAgain();
+			document.getElementById('question-block').innerHTML = '';
+			document.getElementById('question-block').style.display = 'none';
+			document.getElementById('modal__window').style.display = 'none';
+			buttonCheck.hidden = true;
+			buttonTop.style.display = 'block';
+		} catch(error){
+			window.alert(error);
 		}
 	}
 
-	modalWindow(resArr);
-}
 
-function modalWindow(array){
-	var contentBlock = document.querySelector('.modal__content');
-	for(var i = array.length - 1; i >=0; i-- ){
-		var clone = array[i].cloneNode(true);
+	function showTest(){
+		var strQuestions = localStorage.getItem("test");
+		objQuestions = JSON.parse(strQuestions);
+		var tmplHtml = document.getElementById('questions').innerHTML;
+		var context = tmpl(tmplHtml, {
+			data: objQuestions
+		});
 
-		contentBlock.insertAdjacentElement('afterBegin', clone);
+			buttonTop.style.display = 'none';
+
+		document.getElementById('question-block').innerHTML = context;
+		document.getElementById('question-block').style.display = 'block';
+		neededNum = objQuestions.questions.length;
+		buttonCheck.hidden = false;
 	}
-
-	contentBlock.appendChild(showResult(result, neededNum));
-	document.getElementById('modal__window').style.visibility = 'visible';
-}
-
-function showResult(score, total){
-	var content = document.createElement('p');
-	content.classList.add('modal__result');
-	content.innerHTML = 'Bаш результат ' + score + ' из ' + total;
-	return content;
-}
-
-function tryAgain(){
-	if(modalContent.children){
-		modalContent.innerHTML = '';
-	}
-	result = 0;
-	document.getElementById('modal__window').style.visibility = 'hidden';
-
-	showTest();
-}
-
-function closeTest(){
-	try{
-		tryAgain();
-		document.getElementById('question-block').innerHTML = '';
-		document.getElementById('modal__window').style.visibility = 'hidden';
-		button.hidden = true;
-	} catch(error){
-		console.log(error);
-	}
-}
-
-
-function showTest(){
-	var strQuestions = localStorage.getItem("test");
-	objQuestions = JSON.parse(strQuestions);
-	var tmplHtml = document.getElementById('questions').innerHTML;
-	var context = tmpl(tmplHtml, {
-		data: objQuestions
-	});
-	document.getElementById('question-block').innerHTML = context;
-	neededNum = objQuestions.questions.length;
-	button.hidden = false;
-}
 
 }
