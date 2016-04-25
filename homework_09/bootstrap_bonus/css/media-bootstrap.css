@@ -1,0 +1,311 @@
+@media (max-width: 480px){
+	
+	.header{
+		height: 516px;
+	}
+
+	#header__carousel{
+		height: 260px;
+	}
+
+	.carousel-control{
+		;
+	}
+
+	.carousel-control .glyphicon-chevron-left{
+		top: 43%;
+		margin-left: 0px;
+	}
+
+	.carousel-control .glyphicon-chevron-right{
+		top: 43%;
+		margin-right: 0px;
+	}
+
+	.head-article{
+		width: 54%;
+		margin: 25% auto 0;
+	}
+
+	.head-article__subheader{
+		height: 19px;
+	}
+
+	.navbar-collapse{
+		position: absolute;
+		top: 54px;
+		left: 50%;
+		
+		margin-left: -122px;
+		border-top: 0px;
+		/*text-transform: uppercase;*/
+	}
+
+	.navbar-toggle{
+		margin-right: 0;
+		z-index: 100;
+	}
+
+	.navbar-header{
+		text-align: center;
+	}
+
+	.navbar-brand{
+		float: none;
+		text-align: center;
+	}
+
+	.menu__header{
+		width: 245px;
+		border-radius: 7px;
+		/*background: rgb(54, 41, 62);*/
+		background: rgba(54, 41, 62, 0.9);
+		text-align: center;
+	}
+
+	.menu__header .menu__item{
+		border-top: 1px solid #624b6c;
+		border-bottom: 1px solid #36283e;
+	}
+
+	.menu__header .menu__item:first-child{
+		border-radius: 7px 7px 0px 0px
+	}
+
+	.menu__header .menu__item:last-child{
+		border-radius: 0px 0px 7px 7px
+	}
+
+	.menu__header .menu__item:hover{
+		background: rgba(51, 51, 51, 0.7);
+	}
+
+	.menu > .menu__item:nth-child(1) > .menu__link{
+		opacity: 0;
+	}
+
+	.about-block{
+		padding-top: 68px;
+	}
+
+	.about-block__item{
+		width: 71%;
+		margin: 0 14%;
+	}
+
+	.about-block__item.music{
+		margin-top: 19px;
+	}
+
+	.about-block__item.speak{
+		margin-top: 33px;
+	}
+
+	.about-block__p {
+		height: 70px;
+	}
+	
+	.white-block{
+		padding-bottom: 85px;
+	}
+
+	#comment__carousel{
+		height: 360px;
+	}
+
+	.comment__p{
+		height: 165px;
+	}
+
+	.aside{
+		width: 90%;
+		margin: 0 13%;
+	}
+
+	.aside__list{
+		padding-left: 0;
+	}
+
+	.aside__subheader{
+		width: 50%;
+	}
+
+	.aside__p{
+		width: 65%;
+	}
+
+	.aside .readmore{
+		margin-top: 0;
+		margin-right: 79px;
+	}
+
+	.partner{
+		padding-top: 22px;
+		padding-bottom: 39px;
+	}
+
+	/*.partner__img{
+		margin: 30px 20px;
+	}*/
+
+	.partner__item{
+		height: 120px;
+		line-height: 120px;
+	}
+
+	.partner__item:nth-child(2n + 1) img{
+		padding-left: 50%;
+	}
+
+	
+
+}
+
+@media (min-width: 479px) and (max-width: 768px){
+
+	.navbar-header{
+		text-align: center;
+	}
+	.navbar-brand{
+		float: none;
+		text-align: center;
+	}
+
+	.navbar-collapse{
+		position: absolute;
+		top: 67px;
+		left: 50%;
+		/*transform: translate(-50%, 0);*/
+		margin-left: -122px;
+		border-top: 0px;
+	}
+
+	.navbar-toggle{
+		margin-right: 0;
+		z-index: 100;
+	}
+
+	.menu__header{
+		width: 245px;
+		/*background: rgb(54, 41, 62);*/
+		background: rgba(54, 41, 62, 0.9);
+		text-align: center;
+	}
+
+	.menu__header > .menu__item:nth-child(1) > .menu__link{
+		opacity: 0;
+	}
+
+	/*.carousel-control .glyphicon-chevron-left{
+		margin-left: -20px;
+	}
+
+	.carousel-control .glyphicon-chevron-right{
+		margin-right: -20px;
+	}*/
+	.head-article{
+		
+		width: 50%;
+	
+		float: left;
+	}
+
+	.head-article__subheader{
+		height: 20px;
+	}
+
+	.header__img{
+		
+		width: 193px;
+		height: 303px;
+		margin-right: 27px;
+	
+	}
+
+	.about-block__p{
+		height: 70px;
+	}
+
+	.menu__footer{
+		/*float: left;*/
+		padding-left: 0;
+	}
+
+	.menu__footer .menu__item{
+		padding-right: 21px;
+	}
+
+	.menu__footer .menu__item-last{
+		padding-right: 0;
+	}
+
+
+}
+
+@media(min-width: 768px) and (max-width: 960px){
+	.head-article{
+		width: 320px;
+		margin-left: 40px;
+		float: left;
+	}
+
+	.head-article__p{
+		height: 100px;
+	}
+
+	.header_img{
+		width: 270px;
+		height: 435px;
+	}
+
+	.about-block__p{
+		height: 140px;
+	}
+
+	.news__item{
+		height: 150px;
+	}
+
+	.menu__footer{
+		padding-left: 0;
+	}
+
+	.copy{
+		float: right;
+	}
+}
+
+@media(min-width: 960px){
+
+	.head-article{
+		width: 50%;
+		float: left;
+	}
+
+	.header__img{
+		width: 279px;
+		height: 420px;
+	}
+
+	.about-block__p{
+		height: 120px;
+	}
+
+	
+	.news__item{
+		height: 200px;
+	}
+
+	.footer{
+		height: 100px;
+	}
+
+	/*.menu__footer{
+		float: left;
+	}*/
+
+	/*.copy{
+		float: right;
+	}*/
+
+}

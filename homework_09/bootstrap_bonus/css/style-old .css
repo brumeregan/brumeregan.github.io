@@ -45,6 +45,8 @@ a{
 }
 
 .header{
+	height: 780px;
+
 	box-sizing: border-box;
 	position: relative;
 	background: url('../img/bg-high.jpg') center center no-repeat;

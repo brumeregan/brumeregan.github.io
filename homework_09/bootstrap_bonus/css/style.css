@@ -1,0 +1,370 @@
+@font-face {
+	font-family: "League Gothic";
+	src: url('../font/league-gothic.regular.ttf'),
+			 url('../font/league-gothic.regular-webfont.woff'),
+			 url('../font/league-gothic.regular-webfont.eot');
+}
+
+@font-face{
+	font-family: "Open Sans Light";
+	src: url('../font/OpenSans-Light.ttf'),
+			 url('../font/opensans-light-webfont.woff'),
+			 url('../font/opensans-light-webfont.eot');
+}
+
+@font-face {
+	font-family:"Open Sans ExtraBold";
+	src:url('../font/OpenSans-ExtraBold.ttf'),
+			url('../font/opensans-extrabold-webfont.woff'),
+			url('../font/opensans-extrabold-webfont.eot');
+}
+
+body{
+	color: #454545;
+	background: #f9f9f9;
+	font-family: "League Gothic", sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.menu{
+	;
+}
+
+.menu__item{
+		display: inline-block;
+}
+
+.menu__link{
+	padding: 5px 1px 3px 1px;
+	border-bottom: 2px solid transparent;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	font-size: 24px;
+}
+
+.menu__link:hover{
+	border-bottom: 2px solid #edbfff;
+}
+
+
+.header{
+	box-sizing: border-box;
+	position: relative;
+	padding-top: 70px;
+	background: url('../img/bg-high.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.head-article__header{
+	margin-bottom: 2px;
+	color: #fff;
+	text-shadow: 0px 1px 2px #000;
+	font-size: 36px;
+}
+
+.head-article__subheader{
+	overflow: hidden;
+	margin-top: 0;
+	color: #edbfff;
+	text-shadow: 0px 1px 2px #000;
+	font-size: 18px;
+}
+
+.head-article__p{
+	overflow: hidden;
+	color: #fff;
+	line-height: 26px;
+	text-shadow: 0px 1px 2px #000;
+	font-family: "Open Sans Light", sans-serif;
+	font-size: 18px;
+}
+
+.header__img{
+	display: block;
+	width: 193px;
+	height: 303px;
+	/*margin-right: 27px;*/
+	float: right;
+	background: url('../img/iphone-sm.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+
+.about-block{
+	box-sizing: border-box;
+	padding-top: 50px;
+	padding-bottom: 60px;
+	border-top: 1px solid #33253a;
+	border-bottom: 1px solid #0d151b;
+
+	background: -webkit-linear-gradient(#745083, #322539);
+	background: -o-linear-gradient(#745083, #322539);
+  background: -moz-linear-gradient(#745083, #322539); 
+  background: linear-gradient(#745083, #322539); 
+	-webkit-box-shadow: 0px 3px 5px #d1d1d1;
+					box-shadow: 0px 3px 5px #d1d1d1;
+}
+
+.readmore{
+	float: right;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.about-block__item.repair:before{
+	content: '';
+	display: block;
+	width: 30px;
+	height: 132px;
+	margin-right: 24px;
+	margin-left: 7px;
+	float: left;
+	background-image: url(../img/sprite-icons.png);
+	background-position: -7px 0px;
+	background-repeat: no-repeat;
+}
+
+.about-block__item.speak:before{
+	content: '';
+	display: block;
+	width: 30px;
+	height: 132px;
+	margin-right: 24px;
+	margin-left: 7px;
+	float: left;
+	background-image: url(../img/sprite-icons.png);
+	background-position: -50px 7px;
+	background-repeat: no-repeat;
+}
+
+.about-block__item.music:before{
+	content: '';
+	display: block;
+	width: 30px;
+	height: 132px;
+	margin-right: 24px;
+	margin-left: 7px;
+	float: left;
+	background-image: url(../img/sprite-icons.png);
+	background-position: -90px 7px;
+	background-repeat: no-repeat;
+}
+
+.white-text{
+	color: #ffffff;
+}
+
+.dark-text{
+	color: #454545;
+}
+
+.white-block{
+	box-sizing: border-box;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.comment{
+	box-sizing: border-box;
+	position: relative;
+	width: 62%;
+	padding-left: 41px;
+	padding-top: 23px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	background: #fff;
+}
+.comment__header{
+	text-transform: uppercase;
+}
+
+.comment__header span{
+	display: block;
+	color: #edbfff;
+}
+
+.comment img{
+	position: absolute;
+	top: 14px;
+	left: -20px;
+}
+
+.comment__carousel-indicators{
+	margin-bottom: 30px;
+}
+
+.comment__carousel-indicators .carousel-indicators__item{
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.comment__carousel-indicators .carousel-indicators__item:hover{
+	border-width: 2px;
+	/*border-color: rgba(250, 250, 250, 1);*/
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.comment__carousel-indicators .carousel-indicators__item.active{
+	border-width: 2px;
+	border-color: #fff;
+	background: rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 5px 
+}
+
+.article__header{
+	font-size: 24px;
+}
+
+.article__p{
+	overflow: hidden;
+	line-height: 24px;
+	font-family: "Open Sans Light", sans-serif;
+}
+
+
+
+.about__readmore{
+	margin-top: 7px;
+}
+
+.aside__header{
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: -0.1px;
+}
+
+.aside__subheader{
+	overflow: hidden;
+	height: 20px;
+	margin-top: 3px;
+	color: #454545;
+	font-family: "Open Sans Extrabold", sans-serif;
+	font-size: 18px;
+}
+
+.aside__subheader:hover{
+	color: #454545;
+}
+
+.aside__list{
+	margin-top: 15px;
+}
+
+.aside__item{
+	overflow: hidden;
+	height: 52px;
+	font-family: "Open Sans Light", sans-serif;
+}
+
+.aside__second{
+	margin-top: 14px;
+}
+
+.aside__third{
+	margin-top: 18px;
+} 
+
+.aside__item img{
+	float: left;
+	margin-right: 17px;
+}
+
+.aside p{
+	overflow: hidden;
+	height: 18px;
+	margin-top: 6px;
+	letter-spacing: -0.1px;
+}
+
+.aside p:hover{
+	color: #454545;
+}
+
+.aside .readmore{
+	margin-top: 15px;
+	margin-right: 6px;
+}
+
+.partner{
+	padding-top: 27px;
+	padding-bottom: 27px;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	
+}
+
+.partner__item{
+	min-height: 70px;
+}
+
+.partner__img{
+	;
+}
+
+.news{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #fff;
+
+}
+
+.news__item{
+	overflow: hidden;
+}
+
+.news__p{
+	/*height: 100px;*/
+}
+
+.story h3{
+		font-size: 30px;
+	}
+
+.story span{
+	color: #b9b9b9;
+}
+
+.news__item h4{
+	margin-top: 12px;
+	color: #c5c5c5;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: italic;
+	text-shadow: 1px 1px #fff;
+}
+
+.footer{
+	box-sizing: border-box;
+	height: 200px;
+	padding-top: 39px;
+	background: url(../img/footer-bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.menu__footer{
+	background: none;
+}
+
+.menu__footer .menu__link{
+	font-size: 20px;
+
+}
+
+.copy{
+	text-align: center;
+	color: #fff;
+	font-family: "Open Sans Light", sans-serif;
+	font-size: 12px;
+	text-shadow: 0px 1px #000;
+}
+.copy span{
+	font-family: "Open Sans Extrabold", sans-serif;
+	letter-spacing: 0.1px;
+}
+

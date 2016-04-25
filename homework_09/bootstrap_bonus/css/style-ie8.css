@@ -62,7 +62,7 @@ a{
 	width: 100%;
 	height: 846px;
 	padding-top: 30px; 
-	background-image: url("../img/bg-high.jpg");
+	background-image: url("../img/bg-ie.jpg");
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: cover;
@@ -164,17 +164,16 @@ a{
 
 	/* not needed */
 
-	 .header:after{
+	/* .header:after{
 		content: '';
 		display: block;
 		position: absolute;
 		top: 278px;
 		width: 100%;
 		height: 400px;
-		background: #000;
-		filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+		background: ;
 		z-index: 30;
-	} 
+	} */
   
 
 /*maybe to use some filter ms???*/
