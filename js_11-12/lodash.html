@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LoDash Template</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lodash.min.js"></script>
+	
+</head>
+<body>
+	<button id="second-part">Вторая часть дз</button>
+<!-- template -->
+
+
+
+<script type="text/template" id="template">
+	<div class="about">
+		<h2 class="about__header"> <%= name.last %> <%=name.first %> <%= name.middle %> </h2>
+		<p> <%= occupation %></p>
+		<hr>
+		<h3>Мотивация пройти курсы:</h3>
+		<ul>
+			<% for (var i = 0; i < motivation.length; i++){ %>
+			<li><%= motivation[i] %></li>
+			<% } %>
+		</ul>
+		<hr>
+
+		<h3>Контактные данные:</h3>
+		<p>Мой контактный телефон:</p>
+		<span><%= telephone %></span>
+		<p>Cтраница соцсетей:</p>
+		<a href=" <%= social_fb %> " ><%= name.first %> <%= name.last %></a>
+		<hr>
+		<h3>Мой фидбек:</h3>
+		<p><%= feedback %></p>
+
+	</div>	
+</script>
+
+
+<script src='js/lodash.js'></script>
+</body>
+</html>
