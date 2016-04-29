@@ -116,6 +116,7 @@ $(function(){
 				errorM.classList.add('error');
 				errorM.innerHTML = "Что-то пошло не так О_О Попробуйте позже";
 				$('.search').append(errorM);
+				alert('error');
 			}
 
 		}); //end $.ajax
