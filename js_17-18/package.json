@@ -1,0 +1,17 @@
+{
+  "name": "homework",
+  "version": "0.1.0",
+  "description": "homework for js 17-18",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brumeregan",
+  "license": "ISC"
+}
