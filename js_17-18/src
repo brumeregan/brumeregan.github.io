@@ -1,1 +1,0 @@
-alert("Это второй скрипт!!!!!"),$(function(){var a=$(".products__slider");a.on("click",function(a){function b(a){if("A"==a.get(0).tagName){var b=a.attr("href"),c=a.parent().parent().prev().children().eq(0);return c.attr("src",b),!1}}a.preventDefault();var c=a.target;if($(c).hasClass("slider__thumbs-img")){var d=$(c).parent();b(d)}"A"==c.tagName&&b(c)})});
