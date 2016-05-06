@@ -1,0 +1,19 @@
+.footer{
+	position: relative;
+	height: 115px;
+	margin-top: -115px;
+	background: #000;
+	color: green;
+}
+
+.footer__wrapper{
+	padding-top: 20px;
+}
+
+.menu__footer .menu__link{
+	color: orange;
+}
+
+.footer__copyright{
+	text-align: center;
+}

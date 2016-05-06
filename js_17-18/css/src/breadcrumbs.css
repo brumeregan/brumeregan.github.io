@@ -1,0 +1,28 @@
+.breadcrumbs__item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.breadcrumbs__item:first-child{
+	margin-left: 0;
+}
+.breadcrumbs__item:first-child .breadcrumbs__link:before{
+	content: '';
+	display: none;
+}
+
+.breadcrumbs__link{
+	font-size: 11px;
+	color: #fa3f37;
+	vertical-align: middle;
+}
+
+.breadcrumbs__link:before{
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+	margin-right: 15px;
+	vertical-align: middle;
+	background: url(../../img/right-arrow-of-straight-lines.svg) 0 0  no-repeat;
+}

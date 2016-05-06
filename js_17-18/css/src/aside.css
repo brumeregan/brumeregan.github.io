@@ -1,0 +1,61 @@
+.sidebar{
+	float: left;
+	width: 25%;
+}
+
+.categories__item{
+	position: relative;
+	border-bottom: 1px solid #e7e7e7
+}
+
+
+
+.categories__link{
+	display: block;
+	padding: 10px 20px;
+	padding-right: 50px;
+	color: #000;
+	font-size: 0px;
+}
+
+.categories__link:hover{
+	color: red;
+}
+
+.categories__icon{
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 10%;
+	height: 50px;
+}
+
+.categories__icon img{
+	position: absolute;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+}
+
+.categories__text{
+	display: inline-block;
+	width: 90%;
+	vertical-align: middle;
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+.categories__amount{
+	position:  absolute;
+	font-size: 14px;
+	line-height: 16px;
+	top: 50%;
+	margin-top: -8px;
+	right: 10px;
+}
