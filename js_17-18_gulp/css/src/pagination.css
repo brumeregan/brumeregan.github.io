@@ -1,0 +1,47 @@
+.pagination{
+	text-align: center;
+	
+}
+
+.pagination__wrapper{
+	padding: 30px 0;
+	background: #fff;
+}
+
+.pagination__control{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pagination__prev,
+.pagination__next{
+	width: 10px;
+	max-height: 12px;
+}
+
+.pagination__control:hover svg *{
+	fill: #ff0000;
+}
+
+.pagination__list{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 25px;
+}
+
+.pagination__item{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pagination__link{
+	display: block;
+	width: 40px;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+}
+
+.pagination__link:hover{
+	color: #f00;
+}
