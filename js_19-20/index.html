@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<title>JS 19-20: Sass preprocessor</title>
 	<link rel="stylesheet" href="css/dist/core.css">
+	
+
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+	<script src="js/assets/slick.min.js"></script>
+	<script src="js/src/carousel.js"></script>
+	<script src="js/src/accordion.js"></script>
 </head>
 <body>
 
@@ -64,6 +70,9 @@
 
 	<section class="carousel">
 		<div class="wrapper">
+			<div class="carousel__arrow">
+				
+			</div>
 			<ul class="carousel__list">
 				<li class="carousel__item">
 					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
@@ -76,29 +85,43 @@
 						</h2>
 						<h2 class="carousel__text">
 							<span>Business</span>
-						</h2>
-						
+						</h2>	
 					</div>
 					
 				</li>
 				<li class="carousel__item">
 					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
+					<div class="carousel__text-block">
+						<h2 class="carousel__text">
+							<span>Build</span>
+						</h2>
+						<h2 class="carousel__text">
+							<span>Your</span>
+						</h2>
+						<h2 class="carousel__text">
+							<span>Business</span>
+						</h2>	
+					</div>
 				</li>
 				<li class="carousel__item">
 					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
+					<div class="carousel__text-block">
+						<h2 class="carousel__text">
+							<span>Build</span>
+						</h2>
+						<h2 class="carousel__text">
+							<span>Your</span>
+						</h2>
+						<h2 class="carousel__text">
+							<span>Business</span>
+						</h2>	
+					</div>
 				</li>
 			</ul>
-			<ul class="carousel__controls">
-				<li class="carousel__dots">
-					<a href="#" class="carousel__control-link active"></a>
-				</li>
-				<li class="carousel__dots">
-					<a href="#" class="carousel__control-link"></a>
-				</li>
-				<li class="carousel__dots">
-					<a href="#" class="carousel__control-link"></a>
-				</li>
-			</ul>
+			<div class="carousel__controls-slick">
+				
+			</div>
+			
 		</div>
 	</section>
 	<section class="features">
@@ -225,7 +248,7 @@
 				</ul>
 			</div>
 			<div class="banner">
-				<h3>Banners Place</h3>
+				<h3 class="banner__header">Banners Place</h3>
 				<div class="accordion">
 					<div class="accordion__item">
 						<div class="accordion__item-title accordion__active">

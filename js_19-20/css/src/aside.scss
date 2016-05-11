@@ -90,13 +90,22 @@
 }
 
 .banner{
-	max-width: 49%;
+	width: 49%;
 	vertical-align: top;
+}
+
+.banner__header{
+	font-size: 24px;
+	margin-bottom: 45px;
 }
 
 .accordion{
 	font-size: 13px;
+	.accordion__item{
+		width: 100%;
+	}
 	.accordion__item-title{
+		width: 100%;
 		padding-top: 12px;
 		padding-bottom: 12px;
 		text-transform: uppercase;

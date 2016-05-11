@@ -15,27 +15,59 @@
 	height: 100%;
 	display: inline-block;
 }
-.carousel__controls{
-	text-align: center;
-}
-.carousel__dots{
-	display: inline-block;
-}
-.carousel__control-link{
-	position: relative;
-	bottom: 40px;
-	display: block;
-	width: 20px;
-	height: 20px;
-	background: url($img-dir + 'slider-controlls.png') -29px 0 no-repeat;
-	&.active{
-		background-position: 0 0;
+.carousel__arrow{
+	position: absolute;
+	width: 100%;
+	height: 470px;
+	top: 0;
+	z-index: 999;
+	button{
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		top: 0;
+		font-size: 0;
+		outline: none;
+		cursor: pointer;
+	}
+	.slick-prev{
+		border: 0 none;
+		
+		left: 0;
+	}
+	.slick-next{
+		border: 0 none;
+		right: 0;
 	}
 }
 
+.carousel__controls{
+	position: relative;
+	bottom: 60px;
+	text-align: center;
+	li{
+		display: inline-block;	
+		button{
+			display: block;
+			border: 0px none;
+			outline: none;
+			width: 20px;
+			height: 20px;
+			font-size: 0;
+			cursor: pointer;
+			background: url($img-dir + 'slider-controlls.png') -29px 0 no-repeat;
+		}
+		&.slick-active{
+			button{
+				background-position: 0 0;
+			}
+		}
+	}
+}
 .carousel__text-block{
-	position: absolute;
-	bottom: 40px;
+	position: relative;
+	bottom: 260px;
 	left: 40px;
 	font-size: 54px;
 	.carousel__text{
