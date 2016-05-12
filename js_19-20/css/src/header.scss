@@ -1,6 +1,6 @@
 .header__top{
 	@include clearfix;
-	padding-top: 30px;
+	padding-top: 36px;
 	padding-bottom: 30px;
 }
 
@@ -23,6 +23,7 @@
 
 .social__item{
 	float: left;
+	margin-left: 5px;
 }
 
 .social__link{
@@ -84,7 +85,7 @@
 		border: 1px solid black;
 
 		background: $search-bg;
-		@include placeholder($search-text)
+		@include placeholder(transparentize($white, 0.7));
 	}
 
 	.search__submit{

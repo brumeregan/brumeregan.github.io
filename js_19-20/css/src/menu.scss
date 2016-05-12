@@ -33,7 +33,9 @@
 	display: block;
 	padding: 20px 40px;
 	text-decoration: none;
-	color: $color-link;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 13px;
 	&:hover{
 		color: $color-orange;
 	}

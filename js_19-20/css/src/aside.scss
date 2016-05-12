@@ -1,5 +1,5 @@
 .aside{
-	padding-top: 65px;
+	padding-top: 60px;
 	padding-bottom: 80px;
 	background: $grey-aside;
 }
@@ -73,6 +73,10 @@
 		margin-bottom: 25px;
 		font-size: 13px;
 		color: $color-subheader;
+		.news__item-author{
+			a{
+				color: $blue;}
+		}
 		*{
 			display: inline-block;
 		}
@@ -103,6 +107,7 @@
 	font-size: 13px;
 	.accordion__item{
 		width: 100%;
+		margin-bottom: 5px;
 	}
 	.accordion__item-title{
 		width: 100%;
@@ -122,7 +127,7 @@
 				content: '';
 				top: 50%;
 				margin-top: -15px;
-				left: 10px;
+				left: 12px;
 				display: block;
 				width: 10px;
 				height: 20px;
@@ -144,7 +149,7 @@
 			a{
 				color: $white;
 				&:before{
-					background-position: 0px 10px;
+					background-position: 0px 13px;
 				}
 				&:after{
 					background: $accord-separator-active;

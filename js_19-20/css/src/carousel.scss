@@ -44,10 +44,11 @@
 
 .carousel__controls{
 	position: relative;
-	bottom: 60px;
+	bottom: 45px;
 	text-align: center;
 	li{
-		display: inline-block;	
+		display: inline-block;
+		margin-left: 20px;
 		button{
 			display: block;
 			border: 0px none;

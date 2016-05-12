@@ -36,4 +36,3 @@ function success(data){
 
   console.log('array of all friends', friends);
 }
-

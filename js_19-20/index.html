@@ -3,16 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JS 19-20: Sass preprocessor</title>
-	<link rel="stylesheet" href="css/dist/core.css">
-	
-
+	<link rel="stylesheet" href="css/dist/core.min.css">
 	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 	<script src="js/assets/slick.min.js"></script>
-	<script src="js/src/carousel.js"></script>
-	<script src="js/src/accordion.js"></script>
+	<script src="js/dist/script.min.js"></script>
+	
 </head>
 <body>
-
 <header class="header">
 	<div class="header__top wrapper">
 		<div class="header__logo">
@@ -75,7 +72,7 @@
 			</div>
 			<ul class="carousel__list">
 				<li class="carousel__item">
-					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
+					<img src="img/carouselwithfilters.jpg" alt="stage" class="slider__img">
 					<div class="carousel__text-block">
 						<h2 class="carousel__text">
 							<span>Build</span>
@@ -90,7 +87,7 @@
 					
 				</li>
 				<li class="carousel__item">
-					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
+					<img src="img/carouselwithfilters.jpg" alt="stage" class="slider__img">
 					<div class="carousel__text-block">
 						<h2 class="carousel__text">
 							<span>Build</span>
@@ -104,7 +101,7 @@
 					</div>
 				</li>
 				<li class="carousel__item">
-					<img src="img/slider-stage-1.jpg" alt="stage" class="slider__img">
+					<img src="img/carouselwithfilters.jpg" alt="stage" class="slider__img">
 					<div class="carousel__text-block">
 						<h2 class="carousel__text">
 							<span>Build</span>
@@ -155,36 +152,46 @@
 			<h2 class="service__header">Our Services</h2>
 			<ul class="service__list">
 				<li class="service__item">
-					<figure class="service__fig">
-						<img src="img/img-1.jpg" alt="img1" class="service__img">
-					</figure>
-					<figcaption class="service__caption">
-						Shedule Services
-					</figcaption>
+					<a href="#" class="service__link">
+						<figure class="service__fig">
+							<img src="img/img-1.jpg" alt="img1" class="service__img">
+						</figure>
+						<figcaption class="service__caption">
+							Shedule Services
+						</figcaption>
+					</a>
 				</li>
 				<li class="service__item">
+					<a href="#" class="service__link">
+					
+
 					<figure class="service__fig">
 						<img src="img/img-2.jpg" alt="img2" class="service__img">
 					</figure>
 					<figcaption class="service__caption">
 						Preventive Maintance
 					</figcaption>
+					</a>
 				</li>
 				<li class="service__item">
-					<figure class="service__fig">
-						<img src="img/img-3.jpg" alt="img3" class="service__img">
-					</figure>
-					<figcaption class="service__caption">
-						Tire & Weel Services
-					</figcaption>
+					<a href="#" class="service__link">
+						<figure class="service__fig">
+							<img src="img/img-3.jpg" alt="img3" class="service__img">
+						</figure>
+						<figcaption class="service__caption">
+							Tire & Weel Services
+						</figcaption>
+					</a>
 				</li>
 				<li class="service__item">
-					<figure class="service__fig">
-						<img src="img/img-4.jpg" alt="img4" class="service__img">
-					</figure>
-					<figcaption class="service__caption">
-						Repair Services
-					</figcaption>
+					<a href="#" class="service__link">
+						<figure class="service__fig">
+							<img src="img/img-4.jpg" alt="img4" class="service__img">
+						</figure>
+						<figcaption class="service__caption">
+							Repair Services
+						</figcaption>
+					</a>
 				</li>
 			</ul>
 		</div>
