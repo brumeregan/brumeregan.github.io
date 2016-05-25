@@ -1,0 +1,103 @@
+@import 'extend';
+@import 'media';
+@import 'mixin';
+
+
+.search{
+	text-align: center;
+	padding-bottom: 39px;
+}
+.search__title{
+	font-size: 22px;
+	text-align: center;
+	color: $dark;
+	line-height: 1.1;
+	@include font-family('MontserratBold');
+}
+
+.search__subtitle{
+	@include font-family();
+	color: $dark;
+	font-size: 18px;
+	margin-top: 15px;
+	letter-spacing: -0.1px;
+}
+
+.search__btn{
+	outline: none;
+	cursor: pointer;
+	@include font-family('MontserratBold');
+	width: 87%;
+	margin: 0 auto;
+	transition: all 0.5s;
+	&:hover{
+		background: transparent;
+		color: $red;
+	}
+}
+
+@include tablet{
+	.search{
+		padding-bottom: 90px;
+	}
+	.search__title{
+		margin: 35px 0;
+	}
+	.search__subtitle{
+		margin-bottom: 22px;
+	}
+}
+
+@include desktop{
+	.search__title{
+		margin: 76px 0 35px;
+	}
+
+	.search__subtitle{
+		margin-bottom: 22px;
+	}
+}
+
+.search__input{
+	display: block;
+	width: 87%;
+	border-radius: 5px;
+	border: 1px solid $light-gray;
+	padding: 12px;
+	outline: none;
+	margin: 17px auto 8px;
+	transition: all 0.5s;
+	&:focus{
+		border: 1px solid $red;
+	}
+}
+
+@include tablet{
+	.search__input{
+		display: inline-block;
+		width: 240px;
+		margin-right: 12px;
+	}
+
+	.search__btn{
+		display: inline-block;
+		width: 160px;
+	}
+}
+
+@include desktop{
+	.search{
+		padding-bottom: 91px;
+	}
+	.search__input{
+		display: inline-block;
+		width: 240px;
+		margin-right: 5px;
+	}
+
+	.search__btn{
+		display: inline-block;
+		width: 160px;
+	}
+}
+

@@ -1,0 +1,21 @@
+@import 'font';
+
+@mixin clearfix{
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin font-family($font: 'Roboto'){
+	@if $font == 'Roboto'{
+		font-family: 'Roboto', sans-serif;
+	}
+	@if $font == 'Montserrat'{
+		font-family: 'Montserrat', sans-serif;
+	}
+	@if $font == 'MontserratBold'{
+		font-family: 'Montserrat Bold', sans-serif;
+	}
+}
