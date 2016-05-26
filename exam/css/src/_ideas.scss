@@ -37,16 +37,12 @@
 	display: inline-block;
 	width: 300px;
 	height: 120px;
-	// margin-right: 10px;
-	// margin-bottom: 10px;
 	margin: 11px auto;
 	border-radius: 5px;
-	// display: inline-block;
-  // align-items: center;
-  // justify-content: center;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	transition: all 0.5s;
 	&:after{
 		content: '';
 		transition: all 0.5s;
@@ -87,13 +83,11 @@
 
 .tt{
 	display: table;
-	// width: 100%;
 }
 
 .tc{
 	display: table-cell;
 	vertical-align: middle;
-	// text-align: center;
 	height: 120px;
 	width: 320px;
 
@@ -118,11 +112,6 @@
 	.grid__width-2{
 		width: 490px;
 	}
-	// .grid__item-width2{
-	// 	.tc{
-	// 		width: 490px;
-	// 	}
-	// }
 }
 
 @include desktop{
@@ -131,7 +120,6 @@
 		width: 300px;
 		height: 310px;
 		margin-right: 17px;
-		// margin-left: 8px;
 	}
 
 	.tc{
@@ -143,18 +131,4 @@
 	.grid__width-2{
 		width: 620px;
 	}
-	// .grid__item-width2{
-	// 	.tc{
-	// 		width: 625px;
-	// 	}
-	// }
 }
-
-
-// .grid__title{
-// 	color: $white;
-// 	font-size: 22px;
-// }
-// .grid__item-width2{
-// 	width: 400px;
-// }

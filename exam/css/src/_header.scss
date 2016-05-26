@@ -17,14 +17,10 @@
 	.header{
 		min-width: 768px;
 		height: 702px;
-
 		.wrapper{
 			min-width: 768px;
 			max-width: 100%;
-
 			padding-top: 20px;
-
-
 			.header__top{
 				@include clearfix;
 				width: 670px;
@@ -45,7 +41,6 @@
 			width: 960px;
 			padding: 10px;
 			padding-top: 37px;
-			// max-width: 100%;
 			.header__top{
 				@include clearfix;
 				margin-bottom: 103px;
