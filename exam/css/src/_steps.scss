@@ -55,18 +55,6 @@
 		@include font-family();
 	}
 
-	&.steps__item-1{
-		
-	}
-
-	&.steps__item-2{
-		// background-image: url($img-dir + 'carousel-2.jpg');
-	}
-
-	&.steps__item-3{
-		// background-image: url($img-dir + 'carousel-3.jpg');
-	}
-
 	.steps__p{
 		color: $light-gray;
 	}

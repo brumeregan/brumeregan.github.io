@@ -2,7 +2,7 @@
 @import 'mixin';
 
 .header{
-	background: url('../../img/head-img.jpg') no-repeat;
+	background: url($img-dir + 'head-img.jpg') no-repeat;
 	background-position: center center;
 	background-size: cover;
 	@include font-family('MontserratBold');
@@ -78,8 +78,6 @@
 		float: left;
 		line-height: 43px;
 	}
-
-
 }
 
 .header__content{
