@@ -1,0 +1,698 @@
+@import 'reset';
+@import 'var';
+@import 'extend';
+@import 'font';
+@import 'media';
+@import 'mixin';
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	@include font-family();
+}
+
+.wrapper{
+	min-width: 960px;
+	width: 960px;
+}
+
+/******MENU**********/
+
+.menu{
+	;
+}
+.menu__item{
+	display: inline-block;
+}
+.menu__link{
+	display: inline-block;
+	text-decoration: none;
+	padding: 12px 18px; 
+	border-radius: 50px;
+	font-size: 14px;
+	margin-right: 7px;
+
+}
+
+.menu__link-bordered{
+	border: 2px solid $white;
+	transition: all 0.5s;
+	&:hover{
+		border: 2px solid $red;
+		color: $red;
+	}
+}
+
+.header{
+	.menu__link{
+		padding: 12px 4px;
+	}
+	.menu__link-bordered{
+		padding: 10px 19px;
+		margin-left: 4px;
+	}
+}
+
+.menu__header-top{
+	float: right;
+	margin-bottom: 0;
+
+	.menu__link{
+		color: $white;
+		transition: all 0.5s;
+		&:hover{
+			color: $red;
+		}
+	}
+}
+
+	.header{
+		.header__content-btn{
+			width: 220px;
+			margin: 0 auto;
+		}	
+	}
+
+	.menu__link{
+		margin-right: 6px;
+	}
+
+	.menu__link-bordered{
+		margin-left: 10px;
+		margin-right: 0;
+	}
+
+
+.header__content-btn{
+	@extend %bg__button;
+	margin-top: 3px;
+	transition: all 0.5s;
+	border: 2px solid $red;
+	&:hover{
+		border: 2px solid $red;
+		background: transparent;
+		color: $red;
+	}
+}
+
+
+.search__btn{
+	@extend %bg__button;
+}
+
+
+
+.footer{
+	.menu__link{
+		padding: 5px 10px;
+		font-size: 14px;
+		color: $light;
+		@include font-family();
+	}
+}
+
+
+/*******HEADER*********/
+
+.header{
+	background: url($img-dir + '/head-img.jpg') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	@include font-family('MontserratBold');
+	min-width: 960px;
+	height: 700px;
+	.wrapper{
+		width: 960px;
+		padding: 10px;
+		padding-top: 37px;
+		.header__top{
+			@include clearfix;
+			margin-bottom: 103px;
+		}
+	}
+}	
+
+.logo{
+	float: left;
+	line-height: 43px;
+	@include clearfix;
+	.logo__item{
+		text-decoration: none;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: all 0.5s;
+		&:hover{
+			color: $red;
+		}
+	}
+}
+
+.header__content{
+	width: 485px;
+	margin: 0 auto;
+	.header__content-title{
+		font-size: 52px;
+	}
+	.header__content-p{
+		font-size: 24px;
+		width: 485px;
+		margin-top: 25px;
+		margin-bottom: 36px;
+	}
+}
+
+/***STEPS***/
+
+.steps{
+		margin-top: 97px;
+		margin-bottom: 91px;
+	}
+	.steps__title{
+		margin-bottom: 33px;
+	}
+	.steps__list{
+		width: 100%;
+		margin: 0 auto;
+		text-align: justify;
+		font-size: 0px;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 100%;
+		}
+	}
+	.steps__item{
+		&:nth-child(3){
+			margin: 0 13px;
+		}
+	}
+
+
+	.jcarousel{
+	position: relative;
+	width: 300px;
+	overflow: hidden;
+	height: 240px;
+	margin: 0 auto;
+
+	@include clearfix;
+	&.steps__item-1{
+		.jcarousel__item{
+			&:first-child{
+				background-image: url($img-dir + 'carousel-1.jpg');
+			}
+			&:nth-child(2){
+				background-image: url($img-dir + 'carousel-2.jpg');
+			}
+			&:last-child{
+				background-image: url($img-dir + 'carousel-3.jpg');
+			}
+		}
+	}
+	&.steps__item-2{
+		.jcarousel__item{
+			&:first-child{
+				background-image: url($img-dir + 'carousel-2.jpg');
+			}
+			&:nth-child(2){
+				background-image: url($img-dir + 'carousel-3.jpg');
+			}
+			&:last-child{
+				background-image: url($img-dir + 'carousel-1.jpg');
+			}
+		}
+	}
+
+	&.steps__item-3{
+		.jcarousel__item{
+			&:first-child{
+				background-image: url($img-dir + 'carousel-3.jpg');
+			}
+			&:nth-child(2){
+				background-image: url($img-dir + 'carousel-2.jpg');
+			}
+			&:last-child{
+				background-image: url($img-dir + 'carousel-1.jpg');
+			}
+		}
+	}
+
+	&__list{
+		position: relative;
+		width: 100000em;
+		
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item{
+		position: relative;
+		float: left;
+		width: 300px;
+		height: 405px;
+		background-position: center;
+		background-repeat: no-repeat;	
+	}
+}
+
+.arrow{
+		top: 150px;
+		&--right{
+			right: 20px;
+			display: inline-block;
+			width: 30px;
+			height: 100px;
+			background-image: url($img-dir + 'arrow-next.png');
+			background-repeat: no-repeat;
+		}
+		&--left{
+			left: 20px;
+			display: inline-block;
+			width: 30px;
+			height: 100px;
+			background-image: url($img-dir + 'arrow-prev.png');
+			background-repeat: no-repeat;	
+		}
+	}
+
+	.steps__item{
+		display: inline-block;
+		width: 300px;
+		height: 405px;
+	}
+
+	.jcarousel{
+		width: 300px;
+	}
+
+
+	/*******PARTNERS**********/
+	.partners{
+	text-align: center;
+	margin-bottom: 35px;
+	
+	}
+
+	.partners__list{
+		margin-top: 17px;
+	}
+
+
+		.partners__item{
+			display: inline-block;
+			width: 24%;
+			vertical-align: top;
+		}	
+	
+
+	.partners__title{
+		margin-bottom: 20px;
+		font-size: 22px;
+		font-weight: bold;
+		color: $dark;
+		width: 260px;
+		margin: 0 auto;
+		line-height: 1.1;
+		@include font-family('MontserratBold');
+	}
+
+
+	.partners__name{
+		font-size: 14px;
+		@include font-family('MontserratBold');
+		color: $dark;
+	}
+
+	.partners__p{
+		padding: 17px 40px 3px;
+		font-size: 14px;
+		color: $light;
+		line-height: 1.2;
+		@include font-family();
+	}
+
+
+	.partners__img{
+		position: relative;
+		width: 120px;
+		height: 120px;
+		margin: 0 auto 20px;
+		margin-bottom: 18px;
+			> img{
+				transition: all 0.5s;
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		.partners__img-icon{
+			position: absolute;
+			right: -3px;
+			bottom: -4px;
+			.partners__icon{
+			}
+		}
+	}
+	
+
+	.partners__link-btn{
+		display: block;
+		padding: 10px;
+		width: 87%;
+		border: 2px solid $red;
+		border-radius: 50px;
+		color: $red;
+		text-decoration: none;
+		margin: 0 auto 20px;
+		letter-spacing: -1px;
+		transition: all 0.5s;
+		@include font-family('MontserratBold');
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+
+	
+
+
+	.partners{
+		.partners__link-btn{
+			width: 190px;
+		}
+		.partners__title{
+			width: 405px;
+		}
+		
+		.partners__list{
+			margin-top: 33px;
+			margin-bottom: 10px;
+		}
+
+		.partners__p{
+			padding: 17px 10px 3px;
+		}
+	}
+
+/*******IDEAS*********/
+
+.ideas{
+	margin-bottom: 35px;
+	.ideas__title{
+		font-size: 22px;
+		text-align: center;
+		line-height: 1.2;
+		color: $dark;
+		@include font-family('MontserratBold');
+	}
+}
+
+
+	.ideas{
+		margin-top: 96px;
+	}
+	.ideas__title{
+		margin-bottom: 20px;
+	}
+
+
+
+.grid__item{
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 120px;
+	margin: 11px auto;
+	border-radius: 5px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+	&:after{
+		content: '';
+		transition: all 0.5s;
+	}
+	&:hover{
+
+		&:after{
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			border-radius: 5px;
+			z-index: 9;
+		}
+	}
+}
+
+.grid__link{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+	color: $white;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 99;
+
+}
+
+.grid__text{
+	font-size: 22px;
+	@include font-family('MontserratBold');
+	text-shadow: 0px 0px 2px $dark;
+}
+
+.tt{
+	display: table;
+}
+
+.tc{
+	display: table-cell;
+	vertical-align: middle;
+	height: 120px;
+	width: 320px;
+
+}
+
+
+	.grid__item{
+		display: inline-block;
+		width: 300px;
+		height: 310px;
+		margin-right: 17px;
+	}
+
+	.tc{
+		height: 310px;
+		width: 625px;
+	}
+
+
+	.grid__width-2{
+		width: 620px;
+	}
+
+
+/***********search************/
+
+.search{
+	text-align: center;
+	padding-bottom: 39px;
+}
+.search__title{
+	font-size: 22px;
+	text-align: center;
+	color: $dark;
+	line-height: 1.1;
+	@include font-family('MontserratBold');
+}
+
+.search__subtitle{
+	@include font-family();
+	color: $dark;
+	font-size: 18px;
+	margin-top: 15px;
+	letter-spacing: -0.1px;
+}
+
+.search__btn{
+	outline: none;
+	cursor: pointer;
+	@include font-family('MontserratBold');
+	width: 87%;
+	margin: 0 auto;
+	transition: all 0.5s;
+	&:hover{
+		background: transparent;
+		color: $red;
+	}
+}
+
+
+	.search__title{
+		margin: 76px 0 35px;
+	}
+
+	.search__subtitle{
+		margin-bottom: 22px;
+	}
+
+
+.search__input{
+	display: block;
+	width: 87%;
+	border-radius: 5px;
+	border: 1px solid $light-gray;
+	padding: 12px;
+	outline: none;
+	margin: 17px auto 8px;
+	transition: all 0.5s;
+	&:focus{
+		border: 1px solid $red;
+	}
+}
+
+	.search{
+		padding-bottom: 91px;
+	}
+	.search__input{
+		display: inline-block;
+		width: 240px;
+		margin-right: 5px;
+	}
+
+	.search__btn{
+		display: inline-block;
+		width: 160px;
+	}
+
+
+
+/*********footer*************/
+
+.footer{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	border-top: 5px solid $red;
+	@include clearfix;
+	
+	.logo{
+		margin-bottom: 12px;
+		.logo__link{
+			transition: all 0.5s;
+			&:hover{
+				text-shadow: 0px 0px 2px $red;
+				color: $white;
+			}				
+		}
+		 
+	}
+
+	.menu__item{
+		.menu__link{
+			padding: 0;
+			margin-right: 7px;
+			margin-left: 4px;
+			transition: all 0.5s;
+			&:hover{
+				color: $red;
+			}
+		}
+	}
+
+
+
+
+		.logo, .company__wrapper,.partners__wrapper{
+			float: left;
+		}
+		.logo{
+			line-height: 20px;
+			margin-right: 95px;
+			margin-left: 10px;
+		}
+
+		.company__wrapper{
+			margin-right: 90px;
+		}
+
+		.partners__wrapper{
+			.footer__subtitle-partners{
+				margin-top: 0;
+			}
+		}
+
+		.menu__footer{
+			.menu__item{
+				display: block;
+				margin-bottom: 10px;
+				margin-top: 10px;
+				text-align: left;
+
+			}
+		}
+	
+	
+
+	.logo__link{
+		text-transform: uppercase;
+		color: $red;
+		font-weight: bold;
+		font-size: 16px;
+		text-decoration: none;
+		letter-spacing: 0.8px;
+		@include font-family('MontserratBold');
+	}
+}
+
+	.footer{
+		padding-top: 34px;
+	}	
+
+
+.footer__subtitle{
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 5px;
+	@include font-family('MontserratBold');
+}
+
+
+.footer__subtitle-partners{
+	margin-top: 15px;
+	margin-bottom: 18px;
+}
+.copyright__p{
+	font-size: 10px;
+	margin-bottom: 7px;
+	color: $light-gray;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@include font-family('MontserratBold');
+}
+
+	.footer__subtitle{
+		margin-bottom: 17px;
+
+	}
+	.copyright{
+		margin-right: 10px;
+		&__p{
+			display: block;
+			margin-top: 5px;
+		}
+		&__logo{
+			display: block;
+		}
+	}
+
+
