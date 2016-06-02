@@ -1,0 +1,238 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif; }
+
+.wrapper {
+  min-width: 320px;
+  width: 320px;
+  margin: 0 auto; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) and (orientation: portrait) {
+  .wrapper {
+    min-width: 768px; } }
+
+@media only screen and (min-width: 960px) {
+  .wrapper {
+    min-width: 960px;
+    width: 960px; } }
+
+
+.steps {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px; }
+  .steps .wrapper {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .steps__title {
+    margin-bottom: 13px;
+    font-size: 22px;
+    color: #333333;
+    text-align: center; }
+  .steps__num {
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    padding: 5px 15px;
+    background: #ff4e50;
+    font-size: 10px;
+    letter-spacing: 2px; }
+  .steps__item {
+    position: relative;
+    height: 243px;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    color: #fff; }
+    .steps__item .steps__content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px; }
+  .steps__subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montserrat Bold', sans-serif; }
+  .steps__p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #cccccc; }
+
+/****jcarousel*****/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 245px;
+  margin: 0 auto 5px;
+  border-radius: 7px; }
+  .carousel:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .carousel.steps__item-1 .carousel__item:first-child {
+    background-color: #ff2222; }
+  .carousel.steps__item-1 .carousel__item:nth-child(2) {
+    background-color: #aaa222; }
+  .carousel.steps__item-1 .carousel__item:last-child {
+    background-color: #787316; }
+  .carousel.steps__item-2 .carousel__item:first-child {
+    background-color: yellow; }
+  .carousel.steps__item-2 .carousel__item:nth-child(2) {
+    background-color: purple; }
+  .carousel.steps__item-2 .carousel__item:last-child {
+    background-color: crimson; }
+  .carousel.steps__item-3 .carousel__item:first-child {
+    background-color: red; }
+  .carousel.steps__item-3 .carousel__item:nth-child(2) {
+    background-color: green; }
+  .carousel.steps__item-3 .carousel__item:last-child {
+    background: blue; }
+  .carousel__list {
+    position: relative;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    left: 1px; }
+  .carousel__item {
+    position: absolute;
+    /*float: left;*/
+    top: 0;
+    left: 0;
+    display: none;
+    width: 300px;
+    height: 405px;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.arrow {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background-image: none;
+  cursor: pointer;
+  z-index: 99; }
+  .arrow--left {
+    left: 0; }
+  .arrow--right {
+    right: 0; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) and (orientation: portrait) {
+  .steps {
+    margin-top: 97px;
+    margin-bottom: 93px; }
+    .steps__title {
+      margin-bottom: 32px; }
+    .steps__list {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify; }
+      .steps__list:after {
+        content: '';
+        display: inline-block;
+        width: 100%; }
+    .steps__item {
+      vertical-align: top; }
+      .steps__item:nth-child(3) {
+        margin: 0 15px; }
+  .arrow {
+    top: 40px; }
+    .arrow--right {
+      right: 10px;
+      display: inline-block;
+      width: 30px;
+      height: 100px;
+      background-image: url("../img/arrow-next.png");
+      background-repeat: no-repeat; }
+    .arrow--left {
+      left: 10px;
+      display: inline-block;
+      width: 30px;
+      height: 100px;
+      background-image: url("../img/arrow-prev.png");
+      background-repeat: no-repeat; }
+  .steps__item {
+    display: inline-block;
+    width: 235px;
+    height: 405px; }
+  .carousel {
+    width: 235px; }
+    .carousel__item {
+      width: 235px; } }
+
+@media only screen and (min-width: 960px) {
+  .steps {
+    margin-top: 97px;
+    margin-bottom: 91px; }
+    .steps__title {
+      margin-bottom: 33px; }
+    .steps__list {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify;
+      font-size: 0px; }
+      .steps__list:after {
+        content: '';
+        display: inline-block;
+        width: 100%; }
+    .steps__item {
+      display: inline-block;
+      width: 300px;
+      height: 405px;
+      vertical-align: top; }
+      .steps__item:nth-child(3) {
+        margin: 0 13px; }
+  .arrow {
+    top: 150px; }
+    .arrow--right {
+      right: 20px;
+      display: inline-block;
+      width: 30px;
+      height: 100px;
+      background-image: url("../img/arrow-next.png");
+      background-repeat: no-repeat; }
+    .arrow--left {
+      left: 20px;
+      display: inline-block;
+      width: 30px;
+      height: 100px;
+      background-image: url("../img/arrow-prev.png");
+      background-repeat: no-repeat; }
+  .carousel {
+    width: 300px; } }

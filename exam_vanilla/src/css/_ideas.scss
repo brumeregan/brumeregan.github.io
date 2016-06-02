@@ -1,0 +1,150 @@
+@import 'media';
+@import 'mixin';
+
+.ideas{
+	margin-bottom: 35px;
+	&__title{
+		font-size: 22px;
+		text-align: center;
+		line-height: 1.2;
+		color: $dark;
+		@include font-family('MontserratBold');
+	}
+}
+
+.grid{
+	padding: 0 10px;
+	&__item{
+		position: relative;
+		display: inline-block;
+		width: 300px;
+		min-height: 120px;
+		// height: 120px;
+		// max-height: 120px;
+		// margin: 11px auto;
+		// margin-bottom: 10px;
+		margin: 0 auto 10px;
+		border-radius: 5px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: all 0.5s;
+		overflow: hidden;
+		img{
+			// position: absolute;
+			max-width: 100%;
+			// height: 100%;
+		}
+		// &:after{
+		// 	content: '';
+		// 	transition: all 0.5s;
+		// }
+		// &:hover{
+
+		// 	&:after{
+		// 		position: absolute;
+		// 		content: '';
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		background: rgba(0, 0, 0, 0.5);
+		// 		border-radius: 5px;
+		// 		z-index: 9;
+		// 	}
+		// }
+	}
+
+	&__link{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-decoration: none;
+		color: $white;
+		width: 100%;
+		// height: 100%;
+		text-align: center;
+		z-index: 99;
+	}
+
+	&__text{
+		font-size: 22px;
+		@include font-family('MontserratBold');
+		text-shadow: 0px 0px 2px $dark;
+	}	
+}
+
+.tt{
+	display: table;
+}
+
+.tc{
+	display: table-cell;
+	vertical-align: middle;
+	// height: 120px;
+	width: 320px;
+
+}
+
+@include tablet{
+	.ideas{
+		margin-top: 97px;
+		margin-bottom: 75px;
+		&__title{
+			margin-bottom: 22px;
+		}
+	}
+
+	.grid{
+		&__item{
+			display: inline-block;
+			// width: 29%;
+			width: 235px;
+			// height: 310px;
+			// max-height: 310px;
+			// margin-left: 10px;
+			// margin-right: 6px;
+			// margin-top: 10px;
+			// img{
+				// max-width: 100px;
+			// }
+		}
+		.tc{
+			// height: 310px;
+			// width: 490px;
+		}
+
+		&__width-2{
+			width: 490px;
+		}
+	}
+}
+
+@include desktop{
+	.ideas{
+		margin-top: 96px;
+		&__title{
+			margin-bottom: 20px;
+		}
+	}
+
+	.grid{
+		&__item{
+			display: inline-block;
+			width: 300px;
+			// width:29%;
+			// height: 310px;
+			// max-height: 310px;
+			// margin-right: 16px;
+
+		}
+
+		.tc{
+			// height: 310px;
+			// width: 625px;
+		}
+
+		&__width-2{
+			width: 620px;
+		}
+	}
+}
