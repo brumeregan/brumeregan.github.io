@@ -33,6 +33,7 @@ body{
 	text-decoration: none;
 	padding: 12px 18px; 
 	border-radius: 50px;
+	behavior: url(../htc/border-radius.htc);
 	font-size: 14px;
 	margin-right: 7px;
 
@@ -365,6 +366,7 @@ body{
 		width: 87%;
 		border: 2px solid $red;
 		border-radius: 50px;
+		behavior: url(../htc/border-radius.htc);
 		color: $red;
 		text-decoration: none;
 		margin: 0 auto 20px;
@@ -428,6 +430,7 @@ body{
 	height: 120px;
 	margin: 11px auto;
 	border-radius: 5px;
+	behavior: url(../htc/border-radius.htc);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -445,6 +448,7 @@ body{
 			height: 100%;
 			background: rgba(0, 0, 0, 0.5);
 			border-radius: 5px;
+			behavior: url(../htc/border-radius.htc);
 			z-index: 9;
 		}
 	}
@@ -550,6 +554,7 @@ body{
 	display: block;
 	width: 87%;
 	border-radius: 5px;
+	behavior: url(../htc/border-radius.htc);
 	border: 1px solid $light-gray;
 	padding: 12px;
 	outline: none;

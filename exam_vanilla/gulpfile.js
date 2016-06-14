@@ -116,10 +116,3 @@ gulp.task('build', [
 	// 'img',
 	'font'
 	]);
-
-
-gulp.task('steps:test', function(){
-	return gulp.src('src/css/carousel-test.scss')
-	.pipe(sass())
-	.pipe(gulp.dest('src/css/dist/'));
-});
