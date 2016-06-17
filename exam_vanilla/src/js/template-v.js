@@ -54,7 +54,6 @@ function createTemplate(arr){
 /*******Masonry**************/
 
 function createMasonry(){
-	console.log('img');
 	var elem = document.getElementById('masonry__grid');
 	var item = document.querySelectorAll('.grid__item');
 
@@ -63,14 +62,17 @@ function createMasonry(){
 	  itemSelector: '.grid__item',
 	  gutter: 10,
 	  columnWidth: '.grid__item',
-	  // isFitWidth: true,
 	  isResizeBound: true
 	});
+
+	centeringVertical();
 }
 
 requestImg('');
 
-/*****resizing of window**********/
+/**resizing of window I reinitialize masonry to reset all margin 
+	and img position
+**/
 
 window.addEventListener('resize', function(){
 	createMasonry();

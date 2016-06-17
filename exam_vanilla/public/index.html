@@ -6,7 +6,9 @@
 
 	<title>URLAUBSGLÜCK</title>
 	<link rel="stylesheet" href="css/core.css">
-
+		<!--[if gte IE 8]>
+		<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
 </head>
 <body>
 	<div class="header">
@@ -215,7 +217,7 @@ ideas</h3>
 	
 		<% for (var i = 0; i < data.hits.length; i++){%>
 	  <div class="tt grid__item">
-			<img src="<%= data.hits[i].webformatURL %>" alt="<%= data.hits[i].tags %>">
+			<img src="<%= data.hits[i].webformatURL %>" alt="<%= data.hits[i].tags %>" class="grid__img">
 			<div class="tt">
 				<a href="#" class="grid__link">
 					<span class="grid__text tc"><%= data.hits[i].tags %></span>
