@@ -188,13 +188,13 @@ body{
 		}
 	}
 	.steps__item{
-		&:nth-child(3){
+		&-3{
 			margin: 0 13px;
 		}
 	}
 
 
-	.jcarousel{
+	.carousel{
 	position: relative;
 	width: 300px;
 	overflow: hidden;
@@ -203,41 +203,41 @@ body{
 
 	@include clearfix;
 	&.steps__item-1{
-		.jcarousel__item{
-			&:first-child{
+		.carousel__item{
+			&-1{
 				background-image: url($img-dir + 'carousel-1.jpg');
 			}
-			&:nth-child(2){
+			&-2{
 				background-image: url($img-dir + 'carousel-2.jpg');
 			}
-			&:last-child{
+			&-3{
 				background-image: url($img-dir + 'carousel-3.jpg');
 			}
 		}
 	}
 	&.steps__item-2{
-		.jcarousel__item{
-			&:first-child{
+		.carousel__item{
+			&-1{			
 				background-image: url($img-dir + 'carousel-2.jpg');
 			}
-			&:nth-child(2){
+			&-2{
 				background-image: url($img-dir + 'carousel-3.jpg');
 			}
-			&:last-child{
+			&-3{
 				background-image: url($img-dir + 'carousel-1.jpg');
 			}
 		}
 	}
 
 	&.steps__item-3{
-		.jcarousel__item{
-			&:first-child{
+		.carousel__item{
+			&-1{
 				background-image: url($img-dir + 'carousel-3.jpg');
 			}
-			&:nth-child(2){
+			&-2{
 				background-image: url($img-dir + 'carousel-2.jpg');
 			}
-			&:last-child{
+			&-3{
 				background-image: url($img-dir + 'carousel-1.jpg');
 			}
 		}
@@ -287,8 +287,63 @@ body{
 		height: 405px;
 	}
 
-	.jcarousel{
+
+.steps{
+		margin-top: 97px;
+		margin-bottom: 91px;
+	
+		&__title{
+			margin-bottom: 33px;
+		}
+		&__list{
+			width: 100%;
+			margin: 0 auto;
+			text-align: justify;
+			font-size: 0px;
+			&:after{
+				content: '';
+				display: inline-block;
+				width: 100%;
+			}
+		}
+		&__item{
+
+			display: inline-block;
+			width: 300px;
+			height: 405px;
+			vertical-align: top;
+			&:nth-child(3){
+				margin: 0 13px;
+			}
+		}
+	}
+
+	.carousel{
 		width: 300px;
+		&__list{
+			width: 300px;
+			height: 405px;
+		}
+	}
+
+
+
+	.flickity-prev-next-button{
+		background: none;
+		top: 150px;
+		width: 40px;
+		height: 80px;
+
+		&:hover{
+			background: none;;
+		}
+		svg{
+			width: 30px;
+			height: 50px;
+		}
+		.arrow{
+			fill: $light-gray;
+		}
 	}
 
 
