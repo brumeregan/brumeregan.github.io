@@ -8,8 +8,11 @@ if(buttonSearch.addEventListener){
 }
 
 function searchImg(e){
+	if(e.preventDefault){
 	e.preventDefault();
-	e.stopPropagation();
+	} else{
+		e.returnValue = false;
+	}
 
 	var input = document.querySelector('.search__input');
 	var word = input.value;
