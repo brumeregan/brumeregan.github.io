@@ -10,7 +10,6 @@ function centeringVertical(){
 		var img = document.querySelectorAll('.grid__item');
 		for (var i =  0; i < img.length; i++){
 			var h = img[i].offsetHeight;
-			console.log('img' + i + ' - ' + h);
 			cell[i].style.height = (h - 2) + 'px';
 		}
 	}, 900);	

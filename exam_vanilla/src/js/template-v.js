@@ -1,6 +1,11 @@
 /********event*************/
 var buttonSearch = document.querySelector('.search__btn');
-buttonSearch.addEventListener('click', searchImg);
+if(buttonSearch.addEventListener){
+	buttonSearch.addEventListener('click', searchImg);
+} else {
+	buttonSearch.attachEvent('onclick', searchImg);
+
+}
 
 function searchImg(e){
 	e.preventDefault();
@@ -19,23 +24,34 @@ var keyP = '2654390-274676d357e6d0775fd95c51f';
 function requestImg(word){
 	var url = 'http://pixabay.com/api/?key=' + keyP + '&q=' + word + '&image_type=photo&per_page=8'
 
+	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+		var xhr = new XHR();
+		xhr.open('GET', url, true);
+		
+		
+		// xhr.onreadystatechange = function(){
+		// 	if(xhr.readyState != 4){
+		// 		return;
+		// 	}
 
-	var xhr = new XMLHttpRequest();
+		// 	if( xhr.status != 200){
+		// 		console.log('error != 200', xhr.status + ' : ' + xhr.statusText);
+		// 	} else{
+		// 		createTemplate(xhr.responseText);
+		// 	}
+		// }
+	
 
-	xhr.open('GET', url, true);
-	xhr.send();
-
-	xhr.onreadystatechange = function(){
-		if(xhr.readyState != 4){
-			return;
+		xhr.onload = function() {
+		 createTemplate( this.responseText );
 		}
 
-		if( xhr.status != 200){
-		console.log('error != 200', xhr.status + ' : ' + xhr.statusText);
-		} else{
-			createTemplate(xhr.responseText);
+		xhr.onerror = function() {
+		  alert( 'Ошибка ' + this.status );
 		}
-	}
+
+		xhr.send();
+	
 }
 
 /******template*********/
@@ -74,6 +90,12 @@ requestImg('');
 	and img position
 **/
 
-window.addEventListener('resize', function(){
-	createMasonry();
-});
+if(window.addEventListener){
+	window.addEventListener('resize', function(){
+		createMasonry();
+	});	
+} else{
+	window.attachEvent('onresize', function(){
+		createMasonry();
+	});
+}
