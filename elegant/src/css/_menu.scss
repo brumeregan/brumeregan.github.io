@@ -67,8 +67,10 @@
 	&.open{
 		background: #000;
 		.menu__drop{
+			position: absolute;
 			display: block;
 			right: 0;
+			z-index:2;
 		}
 
 		.icon{
@@ -221,8 +223,10 @@
 	&.open{
 		background: #000;
 		.menu__drop{
+
 			display: block;
 			right: 0;
+			z-index: 5;
 		}
 
 		.icon{
