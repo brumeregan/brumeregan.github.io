@@ -1,0 +1,27 @@
+@import 'media';
+@import 'mixin';
+
+.wrapper{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.block{
+	;
+}
+@include desktop{
+	.wrapper{
+		padding: 0;
+		max-width: 770px;
+		margin: 0 auto;
+	}
+
+	.block{
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 70px 60px;
+		background: $people-bg;
+		@include clearfix;
+	}
+
+	
+}

@@ -1,0 +1,7 @@
+@import 'media';
+
+@include desktop{
+	.footer{
+		margin-top: 0;
+	}
+}

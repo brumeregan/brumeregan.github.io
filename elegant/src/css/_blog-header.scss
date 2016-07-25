@@ -1,0 +1,23 @@
+@import 'media';
+@import 'mixin';
+
+.header{
+	background-image: none;
+	height: initial;
+	&__img{
+		background-image: none;
+	}
+	&__content{
+		display: none;
+	}
+	&__button{
+		display: none;
+	}
+}
+
+@include desktop{
+	.header{
+		background-image: url($img-dir + 'blog/blog-intro.jpg');
+		height: 400px;
+	}
+}
