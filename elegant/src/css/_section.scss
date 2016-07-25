@@ -6,7 +6,7 @@
 	text-align: center;
 	&__title{
 		color: $section-title-color;
-		font-size: $section-title-size;
+		font-size: 2.4em;
 
 
 	}
@@ -20,7 +20,7 @@
 	&__text{
 		margin-top: 75px;
 		color: $section-text-color;
-		font-size: $section-text-size;
+		font-size: 2em;
 		opacity: 0.7;
 		// margin-bottom: 100px;
 		// padding-left: 30px;
@@ -100,10 +100,10 @@
 	}
 
 	&__name{
-		font-size: $people-name-size;
+		font-size: 2em;
 	}
 	&__desc{
-		font-size: 1.9rem;
+		font-size: 1.4em;
 	}
 	&__img{
 		width: 100%;
