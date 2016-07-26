@@ -124,4 +124,4 @@ gulp.task('img', function(){
 				.pipe(gulp.dest(path.public.img));
 });
 
-gulp.task('default', ['html', 'img', 'sass', 'sass:about']);
+gulp.task('default', ['html', 'img', 'sass', 'sass:about', 'sass:blog', 'sass:work', 'sass:projects', 'sass:contact']);
