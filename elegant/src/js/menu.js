@@ -1,16 +1,21 @@
 
-var buttonMenu = document.getElementById('menu');
-var menu = document.getElementById('c-menu');
+var menuUl = document.getElementById('menu');
+var menuDrop = document.getElementById('c-menu');
+var menuButton = document.getElementById('menu-i');
 
-buttonMenu.addEventListener('click', toggleMenu);
+menuButton.addEventListener('click', toggleMenu);
+
 
 function toggleMenu(e){
 	e.preventDefault();
+	// e.stopPropagation();
+	var parent = null;
 
-	if(this.classList.contains('open')){
-		this.classList.remove('open');
+
+	if(menuUl.classList.contains('open')){
+		menuUl.classList.remove('open');
 	} else{
-		this.classList.add('open');
+		menuUl.classList.add('open');
 	}
 
 }
