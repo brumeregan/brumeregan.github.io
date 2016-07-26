@@ -100,7 +100,7 @@ gulp.task('sass:contact', function(){
 // });
 
 gulp.task('watch', function(){
-	gulp.watch(path.watch.css, ['sass', 'sass:contact']);
+	gulp.watch(path.watch.css, ['sass', 'sass:blog']);
 	gulp.watch('src/js/*.js', ['js']);
 	gulp.watch('src/*.html', ['html'])
 });
@@ -124,4 +124,4 @@ gulp.task('img', function(){
 				.pipe(gulp.dest(path.public.img));
 });
 
-gulp.task('default', ['html', 'img', 'sass', 'watch']);
+gulp.task('default', ['html', 'img', 'sass', 'sass:work', 'sass:projects', 'sass:blog', 'sass:contact']);
