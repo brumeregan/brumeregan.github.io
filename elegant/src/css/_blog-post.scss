@@ -26,13 +26,14 @@
 		}
 	}
 	&-header{
-		font-size: 56px;
+		font-size: 1.6em;
 	}
 	&-date{
+		font-size: 0.8em;
 		color: $yellow-color;
 	}
 	&-content{
-		font-size: 30px;
+		font-size: 1.2em;
 	}
 	&-button{
 		@extend .section__more;
