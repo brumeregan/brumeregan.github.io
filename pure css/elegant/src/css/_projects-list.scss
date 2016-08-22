@@ -1,0 +1,30 @@
+@import 'media';
+
+.works-list{
+	text-align: center;
+	&__header{
+		font-size: 60px;
+	}
+	&__img{
+		&-wrapper{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include desktop{
+	.works-list{
+		max-width: 20%;
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+		&__img{
+			&-wrapper{
+				;
+			}
+		}
+	}
+}

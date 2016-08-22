@@ -1,0 +1,37 @@
+@impoort 'media';
+
+.social{
+	display: block;
+}
+
+@include desktop{
+	.social{
+		display: block;
+		padding: 50px 85px;
+		text-align: center;
+		.wrapper{
+			max-width: 1200px;
+			padding: 0 30px;
+		}
+		&__button{
+			display: inline-block;
+			// margin: 0 auto;
+			&:first-child{
+				float: left;
+			}
+			&:last-child{
+				float: right;
+			}
+		}
+
+		&__link{
+			display: block;
+			padding: 1em 2.5em;
+			border: 1px solid black;
+			text-decoration: none;
+			color: $section-text-color;
+			text-transform: uppercase;
+
+		}
+	}
+}

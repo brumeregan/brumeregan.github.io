@@ -1,0 +1,56 @@
+@import 'mixin';
+
+.header{
+	position: relative;
+	padding-left: 40px;
+	padding-right: 40px;
+	width: 100%;
+	height: 100%;
+	background-color: darken(green, 10%);
+	overflow: hidden;
+	
+	&__top{
+		@include clearfix;
+	}
+	&__logo{
+		position: absolute;
+		width: 290px;
+		height: 125px;
+		// top: 50%;
+		// left: 55%;
+		// transform: translate(70%);
+	}
+}
+
+.group{
+	&__link{
+		display: block;
+		float: right;
+	}
+	&-vk{
+		width: 40px;
+		height: 40px;
+		background-image: url('../img/vk-social-network-logo.svg');
+		background-size: cover;
+		&:hover{
+			background-image: url('../img/vk-social-network-logo-hover.svg');
+
+		}
+	}
+}
+
+.content{
+	@include clearfix;
+
+	&__img{
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		img{
+			widht: 100%;
+		}
+	}
+	&__text{
+		text-align: center;
+	}
+}

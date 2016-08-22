@@ -1,0 +1,16 @@
+@import 'media';
+
+.header{
+	background-image: url($img-dir + 'work/work-intro.jpg');
+	height: 750px;
+	&__img{
+		display: none;
+	}
+	&__content{
+		display: none;
+	}
+	&__button{
+		display: none;
+	}
+
+}

@@ -1,0 +1,122 @@
+@import 'var';
+@import 'mixin';
+@import 'custom';
+
+.header{
+	padding: 20px 0;
+	height: 105px;
+	background: $color-bg;
+	font-size: 20px;
+	@include clearfix;
+	&__menu{
+		width: 90%;
+		display: block;
+		float: left;
+		@include clearfix;
+	}
+	&__auth{
+		;
+		float: right;
+		display: block;
+		@include clearfix;
+		.menu-menu__auth{
+			@include clearfix;
+			border: 2px solid $color-nonactive;
+			display: block;
+			margin-top: 10px;
+			float: left;
+			&:hover{
+				border: 2px solid $color-active;
+			}
+			.menu__item{
+				width: initial;
+			}
+			.menu__link{
+				font-size: 12px;
+				text-transform: none;
+				padding: 10px 5px;
+				float: left;
+				&:hover{
+					color: $color-active;
+				}
+			}
+		}
+	}
+}
+
+.menu{
+	display: inline;
+	@include clearfix;
+	text-align: justify;
+	
+
+	&__item{
+		float: left;
+		text-align: center;
+		// width: 17.5%;
+		&-goal{
+			width: 20%;
+		}
+		&-mentor{
+			width: 20%;
+		}
+		&-sandwich{
+			// width: 6%;
+		}
+		&-logo{
+			width: 30%;
+		}
+		&-peple{
+			width: 17%;
+		}
+
+		&-lang{
+			position: relative;
+			width: 6%;
+			.menu__drop{
+				display: none;
+				position: absolute;
+			}
+			&:hover{
+				.menu__drop{
+					display: block;
+				}
+			}
+		}
+	}
+	&__link{
+		display: block;
+		padding: 20px 0 35px;
+		width: 100%;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $color-link;
+
+		&:hover{
+			color: $color-active;
+		}
+
+		&.logo{
+			padding: 0px 0 10px;
+		}
+	}
+
+	.logo{
+		width: 46%;
+		margin: 0 auto;
+		&__smart{
+			display: block;
+			width: 135px;
+			height: 50px;
+			background-position: 0 -124px;
+			&:hover{
+				background-position: -195px 0;
+			}
+		}
+	}
+}
+
+
+
+
+

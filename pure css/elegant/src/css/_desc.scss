@@ -1,0 +1,15 @@
+@import 'media';
+@import 'mixin';
+
+.desc{
+	margin-top: 300px;
+	margin-bottom: 300px;
+	.wrapper{
+
+	}
+
+	&__content{
+		font-size: $about-desc;
+		text-align: center;
+	}
+}

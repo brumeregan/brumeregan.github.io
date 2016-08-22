@@ -1,0 +1,24 @@
+@import 'media';
+
+
+.header{
+	height: auto;
+	margin-bottom: 115px;
+	&__img{
+		display: none;
+	}	
+	&__content{
+		display: none;
+	}
+
+	&__button{
+		display: none;
+	}
+}
+
+@include desktop{
+	.header{
+		background-image: url($img-dir + 'contact/desk-bg.jpg');
+		height: 550px;
+	}
+}
