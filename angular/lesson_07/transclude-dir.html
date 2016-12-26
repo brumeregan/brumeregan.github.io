@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Transclude directive</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<style>
+		.red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form wrap-in='table'>
+		<div>
+			<label for="email">email</label>
+			<input type="text" id="email" placeholder="your email">
+		</div>
+		<div>
+			<label for="password">password</label>
+			<input type="password" id="password" placeholder="your password">
+		</div>
+		<button>Submit</button>
+	</form>
+
+	<script type="text/ng-template" id="red">
+		<div class="red"></div>
+	</script>
+
+	<script type="text/ng-template" id="table">
+		<div> Table header</div>
+	</script>
+
+	<script>
+		var app = angular.module('app', []);
+
+		app.directive('wrapIn', function($templateCache){
+			return{
+				transclude: 'element',
+				link: function(scope, element, attrs, ctrl, transclude){
+					var template = $templateCache.get(attrs.wrapIn);
+					var templateElement = angular.element(template);
+
+					transclude(scope, function(clone){
+						element.after(templateElement.append(clone));
+					});
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -3,16 +3,23 @@ const gulp = require('gulp'),
 			sourcemaps = require('gulp-sourcemaps'),
 			livereload = require('gulp-livereload'),
 			uglify = require('gulp-uglify'),
-			concat = require('gulp-concat');
+			concat = require('gulp-concat'),
+			rigger = require('gulp-rigger'),
+			autoprefixer = require('gulp-autoprefixer');
 
 
-gulp.task('default', ['html', 'img', 'js:lib',  'js', 'scss', 'css:ie']);
+gulp.task('default', ['html', 'img', 'js:lib', 'js:rigger', 'font',  'js:ie', 'js', 'scss', 'css:ie']);
 
 gulp.task('html', function(){
 	return gulp.src('./index.html')
 	.pipe(gulp.dest('./public/'));
 });
 
+gulp.task('js:rigger', function(){
+	return gulp.src('./js/src/*.js')
+	.pipe(rigger())
+	.pipe(gulp.dest('./public/js/'));
+});
 
 
 gulp.task('css:ie', function(){
@@ -22,6 +29,16 @@ gulp.task('css:ie', function(){
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./public/css'));
 });
+
+gulp.task('js:ie', function(){
+	return gulp.src('./js/lib/ie/*.js')
+	.pipe(gulp.dest('./public/js/ie/'));
+});
+
+gulp.task('font', function(){
+	return gulp.src('./font/**/*.*')
+	.pipe(gulp.dest('./public/font/'));
+})
 
 gulp.task('js', function() {
   return gulp.src('./js/src/*.js')

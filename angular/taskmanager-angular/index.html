@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Task manager</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/factories/listFactory.js"></script>
+	<script src="js/factories/cardFactory.js"></script>
+	<script src="js/controllers/listsCtrl.js"></script>
+	<script src="js/controllers/listCtrl.js"></script>
+	<script src="js/controllers/cardCtrl.js"></script>
+	<script src='js/directives/closeEditing.js'></script>
+</head>
+<body>
+
+<section class="list-container" id="lists-container" ng-controller="listsCtrl as listsCtrl">
+
+	<div class="row">
+		<section class="list list-inline" ng-repeat="list in listsCtrl.lists" ng-controller="listCtrl as listCtrl">
+
+			<a ng-click="listCtrl.removeList(list)" class="hand">
+        <div>delete X</div>
+      </a>
+
+			<h2>{{ list.listName }}</h2>
+			<div class="card" ng-repeat="card in listCtrl.getCards(list)"
+												ng-controller="cardCtrl as cardCtrl">
+
+				<div ng-if="!cardCtrl.isEditing">
+					{{ card.desc }}
+					<div ng-click="cardCtrl.editCard(card)">edit Card</div>
+					<div ng-click="cardCtrl.deleteCard(card)">delete card X</div>
+				</div>
+				<div ng-if="cardCtrl.isEditing">
+					<form ng-submit="cardCtrl.updateCard(card)">
+						<input type="text" ng-model="cardCtrl.editingCard.desc"
+										close-editing
+                    is-editing='cardCtrl.isEditing'>
+						<select class='select-list'
+                    ng-model='cardCtrl.editingCard.list_id'
+                    ng-change="cardCtrl.updateCard(card)"
+                    ng-options="list.id as list.listName for list in listsCtrl.lists">
+            </select>
+					</form>
+				</div>
+
+			</div>
+
+			<section class="new-card">
+				<form ng-submit='listCtrl.createCard(list)'>
+					<input type="text" ng-model="listCtrl.cardDesc" class="new-card" placeholder="new card">
+				</form>
+			</section>
+		</section>
+
+		<section class="list list-inline">
+			<form ng-submit="listsCtrl.addList()">
+				<input type="text" ng-model="listsCtrl.listName">
+			</form>
+		</section>
+
+	</div>
+</section>
+	
+</body>
+</html>

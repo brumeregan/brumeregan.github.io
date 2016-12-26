@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto; }
+
+.title {
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold; }
+
+.todo__list {
+  counter-reset: my-counter; }
+
+.todo__controlls {
+  position: relative;
+  margin-bottom: 30px; }
+  .todo__controlls .todo__input {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    height: 30px;
+    outline: none; }
+  .todo__controlls .todo__add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background: #7D1313;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff; }
+
+.todo__item {
+  position: relative;
+  height: 40px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 2px; }
+  .todo__item:before {
+    content: counter(my-counter);
+    counter-increment: my-counter; }
+  .todo__item .todo__delete {
+    cursor: pointer; }
+    .todo__item .todo__delete:hover {
+      color: #7D1313; }
+  .todo__item:hover {
+    box-shadow: 1px 1px 2px #ccc; }
+  .todo__item .item__content {
+    padding-top: 9px;
+    padding-left: 10px;
+    display: inline-block; }
+    .todo__item .item__content .todo__text {
+      padding-top: 3px;
+      padding-bottom: 5px;
+      display: inline-block;
+      width: 450px;
+      visibility: visible; }
+    .todo__item .item__content:hover .todo__text {
+      visibility: hidden; }
+    .todo__item .item__content:hover .todo__item-input {
+      visibility: visible; }
+  .todo__item .todo__item-input {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    font-style: italic;
+    font-weight: bold;
+    height: 40px;
+    width: 450px;
+    border: 0px none;
+    padding-left: 10px;
+    background-color: transparent;
+    visibility: hidden;
+    outline: none;
+    font-size: 16px; }
+
+/*# sourceMappingURL=core.css.map */

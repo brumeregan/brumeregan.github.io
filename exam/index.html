@@ -5,22 +5,17 @@
 	<title>URLAUBSGLÜCK</title>
 	<!-- <link rel="stylesheet" href="css/dist/core.css"> -->
 	<link rel="stylesheet" href="css/core.css">
-	<!-- <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script> -->
-	<!--[if gte IE 8]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+ 	<script src="js/jquery-1.12.4.min.js"></script>
 
-	<!-- <script src="js/jquery-1.12.4.min.js"></script>
-	<script src="js/lodash.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.12.0/lodash.min.js"></script> -->
-	<!-- <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script> -->
+	
+	<!--[if gte IE 8]>
+		<link rel="stylesheet" href="css/ie.css">
+		<script src="http://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+		<script src="js/ie/jquery.xdomainrequest.min.js"></script>
+	<![endif]-->
 
-<!-- 	<script src="js/src/template.js"></script>
-	<script src="js/src/masonry.js"></script> -->
-	<!-- <script src="js/jquery.jcarousel.min.js"></script> -->
-	<!-- <script src="js/src/mycarousel.js"></script>
-	<script src="js/src/vertical-align.js"></script> -->	
-	<!-- <script src="js/all.min.js"></script> -->
+	
 </head>
 <body>
 	<div class="header">
@@ -243,10 +238,11 @@ ideas</h3>
 	  <div class="tt grid__item 
 			<% if ((i === 4) || (i === 5)){ %>
 				grid__width-2
-			<% } %>" style="background-image: url(<%= data[i].imageurl %>);" >
+			<% } %>" style="background-image: url(<%= data[i].webformatURL %>);" >
 			<div class="tt">
 				<a href="#" class="grid__link">
-					<span class="grid__text tc"><%= data[i].word %></span>
+					<span class="grid__text tc"><%= data[i].tags
+					 %></span>
 				</a>
 			</div>
 	  </div>
@@ -255,6 +251,13 @@ ideas</h3>
 	</div>
 </script>
 
-<script src="js/test.js"></script>
+
+
+	<script src="js/ie/lodash-ie.min.js"></script>
+	<script src="js/ie/masonry-3.pkgd.min.js"></script>
+	
+	<script src="js/jquery.jcarousel.min.js"></script>
+	
+	<script src="js/all.min.js"></script>
 </body>
 </html>

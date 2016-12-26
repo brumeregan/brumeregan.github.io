@@ -4,32 +4,15 @@
 .partners{
 	text-align: center;
 	margin-bottom: 35px;
-	.partners__item{
+	&__item{
 		margin-bottom: 25px;
 	}
 
-	.partners__list{
+	&__list{
 		margin-top: 17px;
 	}
 
-	@include tablet{
-		.partners__item{
-			display: inline-block;
-			width: 34%;
-			vertical-align: top;
-			margin-top: 10px;
-		}
-	}
-
-	@include desktop{
-		.partners__item{
-			display: inline-block;
-			width: 24%;
-			vertical-align: top;
-		}	
-	}
-
-	.partners__title{
+	&__title{
 		margin-bottom: 20px;
 		font-size: 22px;
 		font-weight: bold;
@@ -40,35 +23,22 @@
 		@include font-family('MontserratBold');
 	}
 
-	@include tablet{
-		.partners__title{
-			width: 500px;
-		}
-	}
-
-	.partners__name{
+	&__name{
 		font-size: 14px;
 		@include font-family('MontserratBold');
 		color: $dark;
 	}
 
-	.partners__p{
+	&__p{
 		padding: 17px 40px 3px;
 		font-size: 14px;
 		color: $light;
 		line-height: 1.2;
 		@include font-family();
 	}
-	@include tablet{
-		.partners__name{
-			margin-top: 25px;
-		}
-		.partners__p{
-			padding: 17px 10px 3px; 
-		}
-	}
 
-	.partners__img{
+
+	&__img{
 		position: relative;
 		width: 120px;
 		height: 120px;
@@ -80,7 +50,7 @@
 					transform: scale(1.1);
 				}
 			}
-		.partners__img-icon{
+		&-icon{
 			position: absolute;
 			right: -3px;
 			bottom: -4px;
@@ -91,23 +61,7 @@
 		}
 	}
 
-	@include tablet{
-		.partners__img{
-			width: 120px;
-			height: 120px;
-			margin: 0 auto;
-		}
-	}
-
-	@include desktop{
-		.partners__img{
-			width: 120px;
-			height: 120px;
-			margin: 0 auto 20px;
-		}
-	}
-
-	.partners__link-btn{
+	&__link-btn{
 		display: block;
 		padding: 10px;
 		width: 87%;
@@ -124,31 +78,64 @@
 			color: $white;
 		}
 	}
+}
 
-	@include tablet{
-		.partners__link-btn{
+@include tablet{
+	.partners{
+		&__item{
+			display: inline-block;
+			width: 34%;
+			vertical-align: top;
+			margin-top: 10px;
+		}
+		&__title{
+			width: 500px;
+		}
+		&__name{
+			margin-top: 25px;
+		}
+		&__p{
+			padding: 17px 10px 3px; 
+		}
+		&__img{
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+		}
+		&__link-btn{
 			width: 190px;
 			margin-top: 38px;
 		}
 	}
 }
 
+
 @include desktop{
 	.partners{
-		.partners__link-btn{
+		&__img{
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 20px;
+		}
+		&__link-btn{
 			width: 190px;
 		}
-		.partners__title{
+		&__title{
 			width: 405px;
 		}
 		
-		.partners__list{
+		&__list{
 			margin-top: 33px;
 			margin-bottom: 10px;
 		}
 
-		.partners__p{
+		&__p{
 			padding: 17px 10px 3px;
 		}
+		&__item{
+			display: inline-block;
+			width: 24%;
+			vertical-align: top;
+		}	
 	}
 }

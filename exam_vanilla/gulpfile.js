@@ -63,7 +63,7 @@ gulp.task('scss:ie', function(){
 	.pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(autoprefixer())
-	// .pipe(cssnano())
+	.pipe(cssnano())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(path.public.cssie));
 });
@@ -72,7 +72,7 @@ gulp.task('js', function(){
 	return gulp.src(path.src.js)
 	.pipe(rigger())
 	.pipe(sourcemaps.init())
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(path.public.js));
 });
@@ -81,7 +81,7 @@ gulp.task('js:lib', function(){
 	return gulp.src(path.src.jslib)
 	.pipe(rigger())
 	.pipe(sourcemaps.init())
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(path.public.js));
 });
@@ -90,7 +90,7 @@ gulp.task('js:ie', function(){
 	return gulp.src(path.src.jslibie)
 	.pipe(rigger())
 	.pipe(sourcemaps.init())
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(path.public.js));
 });
@@ -113,6 +113,6 @@ gulp.task('build', [
 	'js:lib',
 	'js:ie',
 	'js',
-	// 'img',
+	'img',
 	'font'
 	]);

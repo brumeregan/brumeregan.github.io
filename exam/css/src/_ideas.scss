@@ -3,7 +3,7 @@
 
 .ideas{
 	margin-bottom: 35px;
-	.ideas__title{
+	&__title{
 		font-size: 22px;
 		text-align: center;
 		line-height: 1.2;
@@ -12,73 +12,54 @@
 	}
 }
 
-@include tablet{
-	.ideas{
-		margin-top: 97px;
-		margin-bottom: 75px;
-		&__title{
-			margin-bottom: 22px;
-		}
-	}
-}
-
-@include desktop{
-	.ideas{
-		margin-top: 96px;
-	}
-	.ideas__title{
-		margin-bottom: 20px;
-	}
-}
-
-
-.grid__item{
-	position: relative;
-	display: inline-block;
-	width: 300px;
-	height: 120px;
-	margin: 11px auto;
-	border-radius: 5px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	transition: all 0.5s;
-	&:after{
-		content: '';
+.grid{
+	&__item{
+		position: relative;
+		display: inline-block;
+		width: 300px;
+		height: 120px;
+		margin: 11px auto;
+		border-radius: 5px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		transition: all 0.5s;
-	}
-	&:hover{
-
 		&:after{
-			position: absolute;
 			content: '';
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.5);
-			border-radius: 5px;
-			z-index: 9;
+			transition: all 0.5s;
+		}
+		&:hover{
+
+			&:after{
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				border-radius: 5px;
+				z-index: 9;
+			}
 		}
 	}
-}
 
-.grid__link{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-decoration: none;
-	color: $white;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	z-index: 99;
+	&__link{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-decoration: none;
+		color: $white;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: 99;
+	}
 
-}
-
-.grid__text{
-	font-size: 22px;
-	@include font-family('MontserratBold');
-	text-shadow: 0px 0px 2px $dark;
+	&__text{
+		font-size: 22px;
+		@include font-family('MontserratBold');
+		text-shadow: 0px 0px 2px $dark;
+	}	
 }
 
 .tt{
@@ -93,42 +74,58 @@
 
 }
 
-
 @include tablet{
-	.grid__item{
-		display: inline-block;
-		width: 235px;
-		height: 310px;
-		margin-left: 10px;
-		margin-right: 6px;
-		margin-top: 10px;
+	.ideas{
+		margin-top: 97px;
+		margin-bottom: 75px;
+		&__title{
+			margin-bottom: 22px;
+		}
 	}
 
-	.tc{
-		height: 310px;
-		width: 490px;
-	}
+	.grid{
+		&__item{
+			display: inline-block;
+			width: 235px;
+			height: 310px;
+			margin-left: 10px;
+			margin-right: 6px;
+			margin-top: 10px;
+		}
+		.tc{
+			height: 310px;
+			width: 490px;
+		}
 
-	.grid__width-2{
-		width: 490px;
+		&__width-2{
+			width: 490px;
+		}
 	}
 }
 
 @include desktop{
-	.grid__item{
-		display: inline-block;
-		width: 300px;
-		height: 310px;
-		margin-right: 17px;
+	.ideas{
+		margin-top: 96px;
+		&__title{
+			margin-bottom: 20px;
+		}
 	}
 
-	.tc{
-		height: 310px;
-		width: 625px;
-	}
+	.grid{
+		&__item{
+			display: inline-block;
+			width: 300px;
+			height: 310px;
+			margin-right: 16px;
+		}
 
+		.tc{
+			height: 310px;
+			width: 625px;
+		}
 
-	.grid__width-2{
-		width: 620px;
+		&__width-2{
+			width: 620px;
+		}
 	}
 }

@@ -11,108 +11,49 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-}
-
-.steps__title{
+	&__title{
 	margin-bottom: 13px;
 	font-size: 22px;
 	color: $dark;
 	text-align: center;
-}
+	}
 
-.steps__num{
-	text-transform: uppercase;
-	margin-bottom: 21px;
-	padding: 5px 15px;
-	background: $red;
-	font-size: 10px;
-	letter-spacing: 2px
-}
+	&__num{
+		text-transform: uppercase;
+		margin-bottom: 21px;
+		padding: 5px 15px;
+		background: $red;
+		font-size: 10px;
+		letter-spacing: 2px
+	}
 
-.steps__item{
-	position: relative;
-	height: 243px;
-	margin-bottom: 7px;
-	border-radius: 4px; //mixin
-	
-	color: $white;
+	&__item{
+		position: relative;
+		height: 243px;
+		margin-bottom: 7px;
+		border-radius: 4px;
+		color: $white;
 		.steps__content{
 			position: absolute;
 			bottom: 20px;
 			left: 20px;
 			right: 20px;
 		}
+	}
 
-	.steps__subtitle{
+	&__subtitle{
 		font-size: 24px;
 		font-weight: bold;
 		margin-bottom: 20px;
 		@include font-family('MontserratBold');
 	}
 
-	.steps__p{
+	&__p{
 		font-size: 14px;
 		@include font-family();
-	}
-
-	.steps__p{
 		color: $light-gray;
 	}
 }
-
-@include tablet{
-	.steps{
-		margin-top: 97px;
-		margin-bottom: 93px;
-	}
-	.steps__title{
-		margin-bottom: 32px;
-	}
-	.steps__list{
-		width: 100%;
-		margin: 0 auto;
-		text-align: justify;
-		// font-size: 0px;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 100%;
-		}
-	}
-
-	.steps__item{
-		&:nth-child(3){
-			margin: 0 15px;
-		}
-	}
-}
-
-@include desktop{
-	.steps{
-		margin-top: 97px;
-		margin-bottom: 91px;
-	}
-	.steps__title{
-		margin-bottom: 33px;
-	}
-	.steps__list{
-		width: 100%;
-		margin: 0 auto;
-		text-align: justify;
-		font-size: 0px;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 100%;
-		}
-	}
-	.steps__item{
-		&:nth-child(3){
-			margin: 0 13px;
-		}
-	}	
-}
-
 
 /****jcarousel*****/
 .jcarousel{
@@ -201,6 +142,32 @@
 }
 
 @include tablet{
+	.steps{
+		margin-top: 97px;
+		margin-bottom: 93px;
+	
+		&__title{
+			margin-bottom: 32px;
+		}
+
+		&__list{
+			width: 100%;
+			margin: 0 auto;
+			text-align: justify;
+			&:after{
+				content: '';
+				display: inline-block;
+				width: 100%;
+			}
+		}
+
+		&__item{
+			&:nth-child(3){
+				margin: 0 15px;
+			}
+		}
+	}
+
 	.arrow{
 		top: 40px;
 		&--right{
@@ -220,9 +187,53 @@
 			background-repeat: no-repeat;	
 		}
 	}
+
+	.steps__item{
+		display: inline-block;
+		width: 235px;
+		height: 405px;
+	}
+
+	.jcarousel{
+		width: 235px;
+	
+		&__item{
+			width: 235px;
+		}
+	}
 }
 
+
 @include desktop{
+	.steps{
+		margin-top: 97px;
+		margin-bottom: 91px;
+	
+		&__title{
+			margin-bottom: 33px;
+		}
+		&__list{
+			width: 100%;
+			margin: 0 auto;
+			text-align: justify;
+			font-size: 0px;
+			&:after{
+				content: '';
+				display: inline-block;
+				width: 100%;
+			}
+		}
+		&__item{
+
+			display: inline-block;
+			width: 300px;
+			height: 405px;
+			&:nth-child(3){
+				margin: 0 13px;
+			}
+		}
+	}
+
 	.arrow{
 		top: 150px;
 		&--right{
@@ -241,34 +252,7 @@
 			background-image: url($img-dir + 'arrow-prev.png');
 			background-repeat: no-repeat;	
 		}
-	}	
-}
-
-
-
-@include tablet{
-	.steps__item{
-		display: inline-block;
-		width: 235px;
-		height: 405px;
 	}
-
-	.jcarousel{
-		width: 235px;
-	}
-
-	.jcarousel__item{
-		width: 235px;
-	}
-}
-
-@include desktop{
-	.steps__item{
-		display: inline-block;
-		width: 300px;
-		height: 405px;
-	}
-
 	.jcarousel{
 		width: 300px;
 	}

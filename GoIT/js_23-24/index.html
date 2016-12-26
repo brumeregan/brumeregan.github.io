@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO list</title>
+	<link rel="stylesheet" href="css/dist/core.css">
+	<script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+
+<script type="text/template" id="container__template">
+	<div class="wrapper">
+	<h2 class="title">TODO list</h2>
+	<div class="todo__controlls">
+		<input type="text" class="todo__input">
+		<input type="submit" value="+" class="todo__add">
+	</div>
+	<ol class="todo__list"></ol>
+		
+	</div>
+</script>
+
+<script type="text/template" id="list__template">
+	<% for(var i = 0; i < data.length; i++){ %>
+	<li class="todo__item">	
+		<div class="item__content">
+
+			<span class="todo__text"><%= data[i] %></span>
+			<input type="text" class="todo__item-input" value="<%= data[i] %>">
+		</div>
+
+		<span data-value="<%= data[i] %>" class="todo__delete">✖</span>
+	</li>
+	<% } %>
+</script>
+	
+</body>
+</html>

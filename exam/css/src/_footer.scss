@@ -6,17 +6,34 @@
 	text-align: center;
 	border-top: 5px solid $red;
 	@include clearfix;
-	
+	&__subtitle{
+		font-weight: bold;
+		font-size: 14px;
+		margin-bottom: 5px;
+		@include font-family('MontserratBold');
+	}
+
+	&__subtitle-partners{
+		margin-top: 15px;
+		margin-bottom: 18px;
+	}
+
 	.logo{
 		margin-bottom: 12px;
-		.logo__link{
+		&__link{
+			text-transform: uppercase;
+			color: $red;
+			font-weight: bold;
+			font-size: 16px;
+			text-decoration: none;
+			letter-spacing: 0.8px;
+			@include font-family('MontserratBold');
 			transition: all 0.5s;
 			&:hover{
 				text-shadow: 0px 0px 2px $red;
 				color: $white;
 			}				
-		}
-		 
+		} 
 	}
 
 	.menu__item{
@@ -30,10 +47,19 @@
 			}
 		}
 	}
+	.copyright__p{
+		font-size: 10px;
+		margin-bottom: 7px;
+		color: $light-gray;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include font-family('MontserratBold');
+	}
+}
 
-	@include tablet{
+@include tablet{
 		.footer{
-			padding-top: 36px;
+			padding-top: 38px;
 		}
 		.logo, .company__wrapper,.partners__wrapper{
 			float: left;
@@ -62,9 +88,21 @@
 				text-align: left;
 			}
 		}
-	}
 
-	@include desktop{
+		.copyright{
+		float: right;
+		margin-right: 40px;
+		&__p{
+			float: right;
+		}
+	}
+}
+
+
+@include desktop{
+	.footer{
+		padding-top: 34px;
+		
 		.logo, .company__wrapper,.partners__wrapper{
 			float: left;
 		}
@@ -85,83 +123,24 @@
 		}
 
 		.menu__footer{
-			.menu__item{
-				display: block;
-				margin-bottom: 10px;
-				margin-top: 10px;
-				text-align: left;
-
+				.menu__item{
+					display: block;
+					margin-bottom: 10px;
+					margin-top: 10px;
+					text-align: left;
+				}
+			}
+		&__subtitle{
+			margin-bottom: 17px;
+		}
+		.copyright{
+			float: right;
+			margin-right: 10px;
+			&__p{
+				float: right;
+				margin-top: 5px;
 			}
 		}
-	}
-	
-
-	.logo__link{
-		text-transform: uppercase;
-		color: $red;
-		font-weight: bold;
-		font-size: 16px;
-		text-decoration: none;
-		letter-spacing: 0.8px;
-		@include font-family('MontserratBold');
-	}
-}
-
-@include tablet{
-	.footer{
-		padding-top: 38px;
-	}
-}
-
-@include desktop{
-	.footer{
-		padding-top: 34px;
 	}	
 }
-
-.footer__subtitle{
-	font-weight: bold;
-	font-size: 14px;
-	margin-bottom: 5px;
-	@include font-family('MontserratBold');
-}
-
-
-.footer__subtitle-partners{
-	margin-top: 15px;
-	margin-bottom: 18px;
-}
-.copyright__p{
-	font-size: 10px;
-	margin-bottom: 7px;
-	color: $light-gray;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	@include font-family('MontserratBold');
-}
-
-@include tablet{
-	.copyright{
-		float: right;
-		margin-right: 40px;
-		&__p{
-			float: right;
-		}
-	}
-}
-
-@include desktop{
-	.footer__subtitle{
-		margin-bottom: 17px;
-
-	}
-	.copyright{
-		float: right;
-		margin-right: 10px;
-		&__p{
-			float: right;
-			margin-top: 5px;
-		}
-	}
-
-}
+	

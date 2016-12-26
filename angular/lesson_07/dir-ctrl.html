@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular lesson 12 template url directive</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	
+</head>
+<body>
+	<div ng-controller="mainCtrl">
+		<post></post>
+	</div>
+
+
+<script>
+for(var i=0; i<10; i++) {
+  setTimeout(function() {
+    alert(i);
+  }, 100);
+}
+
+var app = angular.module('app', []);
+
+app.controller('mainCtrl', function($scope){
+	$scope.posts = [
+		{
+			name: 'This is post title 1'
+		},
+		{
+			name: 'This is post title 2'
+		},
+		{
+			name: 'This is post title 3'
+		}
+	];
+
+	$scope.getPosts= function(){
+		return $scope.posts;
+	}
+});
+
+app.directive('post', function(){
+	return{
+		template: '<div ng-repeat="post in getPosts()">{{post.name}}</div>',
+		link: function(scope, element, attrs){
+		}
+	}
+})
+
+
+</script>
+
+</body>
+</html>
