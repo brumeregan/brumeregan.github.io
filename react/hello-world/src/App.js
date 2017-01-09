@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // import Header from './Header';
 
 import './App.css';
+import Menu from './Menu';
+
 
 // import RegistrationForm from './RegistrationForm';
 // const menu = [
@@ -31,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <div>
+      	<Menu />
 				<input type="text" placeholder="test" 
 				ref={(input)=> this.testInput = input} />
 				<button onClick={this.submit.bind(this)}>Submit</button>
