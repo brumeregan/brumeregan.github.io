@@ -1,0 +1,22 @@
+@import 'var';
+@import 'media';
+
+.header{
+	background-image: url($img-dir +'projects/intro.jpg');
+	margin-bottom: 200px;
+	&__button{
+		position: absolute;
+		bottom: 80px;
+		left: 50%;
+	}
+}
+
+@include desktop{
+	.header{
+		&__button{
+			position: absolute;
+			bottom: 80px;
+			left: 50%;
+		}
+	}
+}

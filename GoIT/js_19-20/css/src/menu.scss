@@ -1,0 +1,46 @@
+.header__menu{
+	width: 75%;
+	min-width: 620px;
+	@include ubuntu(condensed)
+}
+.header__menu,
+.search{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.menu{
+	@include clearfix;
+
+}
+.menu__item{
+	position: relative;
+	float: left;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 99;
+		display: block;
+		width: 2px;
+		height: 100%;
+		background: $menu-separator;
+	}
+}
+
+.menu__link{
+	display: block;
+	padding: 20px 40px;
+	text-decoration: none;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 13px;
+	&:hover{
+		color: $color-orange;
+	}
+}
+
+.menu__link-active{
+	background: $highlight;
+}

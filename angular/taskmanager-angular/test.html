@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background: #cecece;
+		}
+		.graph-bg__graph{
+			position: 
+			top: 0;
+			left: 0;
+			opacity: 0.7;
+		}
+	</style>
+</head>
+<body>
+	<div class="graph-bg" style="transform: translate3d(0px, -223.535px, 0px);">
+		<canvas class="graph-bg__graph" width="1366" height="372" style="z-index: 1; transform: translate3d(0px, 223.535px, 0px);"></canvas>
+	</div>
+
+	<script>
+
+		'use strict';
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _raf = __webpack_require__(3);
+
+var _raf2 = _interopRequireDefault(_raf);
+
+var _homeTypesJs = __webpack_require__(41);
+
+var _utilsRequest = __webpack_require__(43);
+
+var wndW,
+    wndH,
+    bgW,
+    bgH,
+    scrTop = 0,
+    docH,
+    bgT,
+    body = document.body,
+    html = document.documentElement,
+    bg,
+    img,
+    cnv,
+    ctx,
+    edges = [],
+    points = [],
+    graph_bg,
+    transformProp = Modernizr.prefixed('transform'),
+    isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1,
+    isOldOpera = window.opera && window.opera.version ? /^12\.\d+$/.test(window.opera.version()) : false,
+    isSlowpock = isOldOpera,
+    isAnimated = true,
+    classes = {
+    root: 'graph-bg',
+    img: 'graph-bg__img',
+    graph: 'graph-bg__graph',
+    overlay: 'js-graph-bg-overlay'
+};
+
+function loadData(name) {
+    var data;
+    return regeneratorRuntime.async(function loadData$(context$1$0) {
+        while (1) switch (context$1$0.prev = context$1$0.next) {
+            case 0:
+                if (!localStorage.getItem(name)) {
+                    context$1$0.next = 2;
+                    break;
+                }
+
+                return context$1$0.abrupt('return', JSON.parse(localStorage.getItem(name)));
+
+            case 2:
+                context$1$0.next = 4;
+                return regeneratorRuntime.awrap((0, _utilsRequest.get)('/graph-data/' + name + '.json'));
+
+            case 4:
+                data = context$1$0.sent;
+
+                localStorage[name] = JSON.stringify(data);
+
+                return context$1$0.abrupt('return', data);
+
+            case 7:
+            case 'end':
+                return context$1$0.stop();
+        }
+    }, null, this);
+}
+
+//create html for bg and bind handlers
+function init(animate) {
+    var overlay;
+    return regeneratorRuntime.async(function init$(context$1$0) {
+        while (1) switch (context$1$0.prev = context$1$0.next) {
+            case 0:
+                overlay = document.querySelector('.' + classes.overlay);
+
+                bg = document.createElement('div');
+                bg.className = classes.root;
+
+                isAnimated = animate;
+                // isSlowpock = true;
+
+                img = new Image();
+                img.src = '/images/home/back.jpg';
+                img.className = classes.img;
+                img.onload = function () {
+                    if (overlay) {
+                        overlay.style.backgroundColor = 'transparent';
+                    }
+                    onResize();
+                };
+
+                cnv = document.createElement('canvas');
+                cnv.style.zIndex = '1';
+                cnv.className = classes.graph;
+                ctx = cnv.getContext('2d');
+
+                bg.appendChild(img);
+
+                if (isSlowpock || !isAnimated) {
+                    graph_bg = new Image();
+                    graph_bg.className = classes.graph;
+                    graph_bg.style.zIndex = '1';
+                    bg.appendChild(graph_bg);
+                } else {
+                    bg.appendChild(cnv);
+                }
+
+                overlay.appendChild(bg);
+
+                window.onresize = function () {
+                    (0, _raf2['default'])(onResize);
+                };
+
+                window.onscroll = function () {
+                    (0, _raf2['default'])(onScroll);
+                };
+
+                onResize();
+
+                context$1$0.next = 20;
+                return regeneratorRuntime.awrap(Promise.all([loadData('edges'), loadData('points')]));
+
+            case 20:
+                return context$1$0.abrupt('return', context$1$0.sent);
+
+            case 21:
+            case 'end':
+                return context$1$0.stop();
+        }
+    }, null, this);
+}
+
+//parallax bg
+function updateBgPos() {
+    var proc, pos;
+
+    proc = Math.max(0, Math.min(1, scrTop / (docH - wndH)));
+    pos = (bgH - wndH) * proc;
+    bgT = pos;
+
+    if (Modernizr.csstransforms3d) {
+        bg.style[transformProp] = 'translate3d(0,-' + pos + 'px, 0)';
+    } else {
+        bg.style.marginTop = -pos;
+    }
+
+    if (!isSlowpock) {
+        if (Modernizr.csstransforms3d) {
+            cnv.style[transformProp] = 'translate3d(0,' + pos + 'px, 0)';
+        } else {
+            cnv.style.marginTop = pos;
+        }
+    }
+}
+
+function onResize() {
+    wndW = window.innerWidth;
+    wndH = window.innerHeight;
+    docH = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    img.width = wndW;
+    bgW = wndW;
+    bgH = img.height;
+
+    cnv.width = wndW;
+    if (isSlowpock || !isAnimated) {
+        graph_bg.width = bgW;
+        graph_bg.height = bgH;
+        cnv.height = bgH;
+    } else {
+        cnv.height = wndH;
+    }
+
+    updateBgPos();
+}
+
+function onScroll() {
+    scrTop = window.scrollY;
+    wndW = window.innerWidth;
+    wndH = window.innerHeight;
+    updateBgPos();
+}
+
+//convert dot coords from percents to pixels
+function getRealCoords(coord, of) {
+    return Math.round(of / 100 * coord);
+    return of / 100 * coord;
+}
+
+//small helper
+function drawCircle(x, y, r) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+}
+
+function isInFrame(p) {
+    return (p.real.x > 0 || p.real.x < bgW) && (p.real.y > 0 || p.real.y < wndH);
+}
+
+//update dots positions and draw it
+function drawPoints(t) {
+    var i, e, max, p, x, y;
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    for (i = 0, max = points.length; i < max; i += 1) {
+        points[i].updatePosition(t);
+
+        points[i].real.x = getRealCoords(points[i].x, bgW);
+        points[i].real.y = getRealCoords(points[i].y, bgH) - bgT;
+
+        // console.log(points[i].real.y)
+        if (isInFrame(points[i])) {
+            drawCircle(points[i].real.x, points[i].real.y, points[i].size);
+        }
+    }
+}
+
+//draw edges between dots
+function drawEdges(t) {
+    var i,
+        e,
+        max,
+        op = 0;
+
+    for (i = 0, max = edges.length; i < max; i += 1) {
+        e = edges[i];
+        if (!isInFrame(points[e[0]]) && !isInFrame(points[e[1]])) {
+            continue;
+        }
+
+        op = 5 / Math.pow(points[e[0]].getDistanceFrom(points[e[1]]) * points[e[0]].size * points[e[1]].size, 1.2);
+
+        ctx.strokeStyle = 'rgba(255, 255, 255, ' + op + ')';
+        ctx.beginPath();
+        ctx.moveTo(points[e[0]].real.x, points[e[0]].real.y);
+
+        ctx.lineTo(points[e[1]].real.x, points[e[1]].real.y);
+        ctx.stroke();
+    }
+}
+
+//main draw func
+function draw(t) {
+    ctx.clearRect(0, 0, bgW, isSlowpock ? bgH : wndH);
+    // ctx.canvas.width = ctx.canvas.width;
+    drawPoints(t);
+    drawEdges(t);
+    // console.log('graphBg', isAnimated);
+
+    if (isSlowpock || !isAnimated) {
+        if (cnv.toDataURL() === 'data:,') {
+            (0, _raf2['default'])(draw.bind(null, t));
+        }
+        // console.log(cnv.toDataURL());
+        graph_bg.src = cnv.toDataURL();
+    } else if (isAnimated) {
+        setTimeout(function () {
+            (0, _raf2['default'])(draw);
+        }, 1000 / 30);
+    }
+}
+
+function graphBg() {
+    var animate = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+    var values;
+    return regeneratorRuntime.async(function graphBg$(context$1$0) {
+        while (1) switch (context$1$0.prev = context$1$0.next) {
+            case 0:
+                context$1$0.next = 2;
+                return regeneratorRuntime.awrap(init(animate));
+
+            case 2:
+                values = context$1$0.sent;
+
+                edges = values[0];
+                points = values[1].slice().map(function (_ref) {
+                    var x = _ref.x;
+                    var y = _ref.y;
+                    return (0, _homeTypesJs.point)(x, y);
+                });
+                (0, _raf2['default'])(draw);
+
+            case 6:
+            case 'end':
+                return context$1$0.stop();
+        }
+    }, null, this);
+}
+
+//exports
+window.graphBg = graphBg;
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./src/home-scripts/graphBg.js
+ ** module id = 40
+ ** module chunks = 0
+ **/
+
+	</script>
+</body>
+</html>

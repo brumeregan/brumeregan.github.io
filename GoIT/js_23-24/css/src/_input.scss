@@ -1,0 +1,90 @@
+.todo__list{
+	counter-reset: my-counter;
+	// list-style-type: decimal;
+}
+
+.todo__controlls{
+	position: relative;
+	margin-bottom: 30px;
+	.todo__input{
+		width: 100%;
+		border: 2px solid $grey;
+		border-radius: 4px;
+		height: 30px;
+		outline: none;
+	}
+	.todo__add{
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 30px;
+		width: 30px;
+		border: 2px solid $grey;
+		border-radius: 4px;
+		outline: none;
+		background: $red;
+		cursor: pointer;
+		font-weight: bold;
+		color: #fff;
+	}
+}
+
+.todo__item{
+	position: relative;
+	height: 40px;
+	border-bottom: 2px solid $grey;
+	margin-bottom: 2px;
+	&:before{
+		content: counter(my-counter);
+		counter-increment: my-counter;
+	}
+	.todo__delete{
+		cursor: pointer;
+		&:hover{
+			color: $red;
+		}
+	}
+
+	&:hover{
+		box-shadow: 1px 1px 2px $grey;
+	}
+
+	.item__content{
+		
+		padding-top: 9px;
+		padding-left: 10px;
+		display: inline-block;
+		.todo__text{
+			padding-top: 3px;
+			padding-bottom: 5px;
+			display: inline-block;
+			width: 450px;
+			visibility: visible;
+		}
+		&:hover{
+			.todo__text{
+				visibility: hidden;
+			}
+			.todo__item-input{
+			visibility: visible;
+			}
+		}
+	}
+
+	.todo__item-input{
+		position: absolute;
+		left: 14px;
+		top: 0;
+
+		font-style: italic;
+		font-weight: bold;
+		height: 40px;
+		width: 450px;
+		border: 0px none;
+		padding-left: 10px;
+		background-color: transparent;
+		visibility: hidden;
+		outline: none;
+		font-size: 16px;
+	}
+}

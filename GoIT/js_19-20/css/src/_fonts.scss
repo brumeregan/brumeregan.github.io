@@ -1,0 +1,22 @@
+@font-face{
+	font-family: 'Ubuntu Light';
+	src: url('../../font/Ubuntu-L.ttf');
+}
+@font-face {
+	font-family: 'Ubuntu Condensed';
+	src:url('../../font/Ubuntu-C.ttf');
+}
+@font-face {
+	font-family: 'Ubuntu Medium';
+	src:url('../../font/Ubuntu-M.ttf');
+}
+
+@mixin ubuntu($style: medium){
+	@if $style == medium{
+		font-family: 'Ubuntu Medium';
+	} @if $style == light {
+		font-family: 'Ubuntu Light';
+	} @if $style == condensed{
+		font-family: 'Ubuntu Condensed';
+	}
+}

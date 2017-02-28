@@ -1,0 +1,10 @@
+/*util.print: Use console.log instead*/
+body {
+  background: #5ec2e7;
+}
+.navbar.navbar-defaul ul {
+  text-align: center;
+}
+.navbar.navbar-defaul ul li {
+  position: relative;
+}

@@ -1,0 +1,47 @@
+.service{
+	padding-top: 50px;
+	padding-bottom: 65px;
+	background: $dark-bg;
+}
+
+.service__header{
+	color: $white;
+	margin-bottom: 50px;
+	font-size: 24px
+}
+
+.service__list{
+	text-align: justify;
+	&:after{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 0;
+	}
+}
+
+.service__item{
+	position: relative;
+	display: inline-block;
+	.service__link{
+		color: $white;
+		&:hover{
+			.service__fig:before{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: url($img-dir + 'img-hover.png') 0 0  no-repeat;
+			}
+			.service__caption{
+				color: $color-orange;
+			}
+		}
+	}
+	.service__caption{
+		color: $white;
+		font-size: 16px;
+		text-align: center;
+		margin-top: 30px;
+	}
+}

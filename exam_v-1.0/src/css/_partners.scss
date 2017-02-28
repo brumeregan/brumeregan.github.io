@@ -1,0 +1,142 @@
+@import 'mixin';
+@import 'media';
+
+.partners{
+	text-align: center;
+	margin-bottom: 35px;
+	&__item{
+		margin-bottom: 25px;
+	}
+
+	&__list{
+		margin-top: 17px;
+	}
+
+	&__title{
+		margin-bottom: 20px;
+		font-size: 22px;
+		font-weight: bold;
+		color: $dark;
+		width: 260px;
+		margin: 0 auto;
+		line-height: 1.1;
+		@include font-family('MontserratBold');
+	}
+
+	&__name{
+		font-size: 14px;
+		@include font-family('MontserratBold');
+		color: $dark;
+	}
+
+	&__p{
+		padding: 17px 40px 3px;
+		font-size: 14px;
+		color: $light;
+		line-height: 1.2;
+		@include font-family();
+	}
+
+
+	&__img{
+		position: relative;
+		width: 120px;
+		height: 120px;
+		margin: 0 auto;
+		margin-bottom: 18px;
+			> img{
+				transition: all 0.5s;
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		&-icon{
+			position: absolute;
+			right: -3px;
+			bottom: -8px;
+			.partners__icon{
+				img{
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	&__link-btn{
+		display: block;
+		padding: 10px;
+		width: 87%;
+		border: 2px solid $red;
+		border-radius: 50px;
+		color: $red;
+		text-decoration: none;
+		margin: 0 auto 20px;
+		letter-spacing: -1px;
+		transition: all 0.5s;
+		@include font-family('MontserratBold');
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+}
+
+@include tablet{
+	.partners{
+		&__item{
+			display: inline-block;
+			width: 34%;
+			vertical-align: top;
+			margin-top: 10px;
+		}
+		&__title{
+			width: 500px;
+		}
+		&__name{
+			margin-top: 25px;
+		}
+		&__p{
+			padding: 17px 10px 3px; 
+		}
+		&__img{
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+		}
+		&__link-btn{
+			width: 190px;
+			margin-top: 38px;
+		}
+	}
+}
+
+
+@include desktop{
+	.partners{
+		&__img{
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 20px;
+		}
+		&__link-btn{
+			width: 190px;
+		}
+		&__title{
+			width: 405px;
+		}
+		
+		&__list{
+			margin-top: 33px;
+			margin-bottom: 10px;
+		}
+
+		&__p{
+			padding: 17px 10px 3px;
+		}
+		&__item{
+			display: inline-block;
+			width: 24%;
+			vertical-align: top;
+		}	
+	}
+}

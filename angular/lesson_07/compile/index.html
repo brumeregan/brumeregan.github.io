@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>mocks </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+	<link rel="stylesheet" href="prettify.css">
+	<script src='main.js'></script>
+
+</head>
+<body>
+
+<ui-source>
+	<div>
+	<label for="name">Name: </label>
+	<input type="text" id='name' placeholder="enter your name" ng-model='yourName'>
+	<hr>
+	<h1>
+		Hello, {{yourName}}
+	</h1>
+	</div>
+</ui-source>
+	
+</body>
+</html>

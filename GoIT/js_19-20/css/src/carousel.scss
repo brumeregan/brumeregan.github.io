@@ -1,0 +1,103 @@
+.carousel{
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+	.carousel__list{
+		position: relative;
+		overflow: hidden;
+		height: 470px;
+	}
+}
+
+.carousel__item{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.carousel__arrow{
+	position: absolute;
+	width: 100%;
+	height: 470px;
+	top: 0;
+	z-index: 999;
+	button{
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		top: 0;
+		font-size: 0;
+		outline: none;
+		cursor: pointer;
+	}
+	.slick-prev{
+		border: 0 none;
+		
+		left: 0;
+	}
+	.slick-next{
+		border: 0 none;
+		right: 0;
+	}
+}
+
+.carousel__controls{
+	position: relative;
+	bottom: 45px;
+	text-align: center;
+	li{
+		display: inline-block;
+		margin-left: 20px;
+		button{
+			display: block;
+			border: 0px none;
+			outline: none;
+			width: 20px;
+			height: 20px;
+			font-size: 0;
+			cursor: pointer;
+			background: url($img-dir + 'slider-controlls.png') -29px 0 no-repeat;
+		}
+		&.slick-active{
+			button{
+				background-position: 0 0;
+			}
+		}
+	}
+}
+.carousel__text-block{
+	position: relative;
+	bottom: 260px;
+	left: 40px;
+	font-size: 54px;
+	.carousel__text{
+		color: #fff;
+		@include ubuntu(medium);
+		text-transform: uppercase;
+		span{
+			display: inline-block;
+			padding-left: 30px;
+			padding-right: 40px;
+			background: rgba(#000, 0.7);
+		}
+		&:first-child{
+			span{
+				color: $color-orange;
+				padding-top: 30px;
+				padding-bottom: 0;
+				padding-right: 30px;
+			}
+		}
+		&:last-child{
+			span{
+				padding-top: 10px;
+				padding-bottom: 20px;
+				padding-right: 30px;
+			}
+		}
+
+		
+	}
+
+}

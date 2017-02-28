@@ -1,0 +1,103 @@
+.header__top{
+	@include clearfix;
+	padding-top: 36px;
+	padding-bottom: 30px;
+}
+
+.header__logo{
+	width: $width-logo;
+	height: $height-logo;
+	float: left;
+}
+
+.header__logo-img{
+	display: block;
+	width: 100%;
+}
+.social{
+	@include clearfix;
+	float: right;
+	padding: 10px 5px;
+
+}
+
+.social__item{
+	float: left;
+	margin-left: 5px;
+}
+
+.social__link{
+	display: block;
+	width: 25px;
+	height: 25px;
+
+	background: url($img-dir + 'social-sprite.png') no-repeat;
+	background-position: 5px 0;	
+}
+
+.social__fb:hover{
+	background-position: 5px -32px;
+}
+
+.social__twitter{
+	background-position: -30px 0;
+}
+.social__twitter:hover{
+	background-position: -30px -32px;
+}
+.social__rss{
+	background-position: -60px 0;
+}
+
+.social__rss:hover{
+	background-position: -60px -32px;
+}
+
+.social__linkedin{
+	background-position: -92px 0;
+}
+
+.social__linkedin:hover{
+	background-position: -92px -32px;
+}
+
+.social__skype{
+	background-position: -126px 0;
+}
+
+.social__skype:hover{
+	background-position: -126px -32px;
+}
+
+.header__bottom{
+	background: $dark-bg;
+}
+
+.search{
+	position: relative;
+	margin: 8px;
+	float: right;
+	width: 20%;
+	.search__input{
+		width: 100%;
+		outline: none;
+		padding: 10px 15px;
+		border: 1px solid black;
+
+		background: $search-bg;
+		@include placeholder(transparentize($white, 0.7));
+	}
+
+	.search__submit{
+		position: absolute;
+		display: block;
+		top: 50%;
+		margin-top: -8px;
+		right: 8px;
+		width: 18px;
+		height: 18px;	
+		border: none;
+		background: url($img-dir + 'search.png') 0 0 no-repeat;
+		cursor: pointer;
+	}
+}

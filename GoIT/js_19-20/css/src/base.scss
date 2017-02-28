@@ -1,0 +1,16 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background: #fff;
+	@include ubuntu(medium);
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	position: relative;
+	max-width: $width;
+	min-width: $width-min;
+	margin: 0 auto;
+}
