@@ -1,4 +1,4 @@
-#Conway's game of Life
+#Conway's game of Life 
 The principles of this game were created in 1970 by mathematician John Conway.
 For more info visit: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
