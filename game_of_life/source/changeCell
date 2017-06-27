@@ -1,0 +1,14 @@
+export default function (e) {
+    // e - is event from click event
+    // needed for getting coords
+
+    // Get right coords for our cell width
+    let x = e.offsetX;
+    let y = e.offsetY;
+
+    let realX = Math.floor(x/(this.cellWidth));
+    let realY = Math.floor(y/(this.cellWidth));
+
+    this.universe[realY][realX] = !this.universe[realY][realX];
+    this.draw();
+};

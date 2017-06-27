@@ -1,0 +1,14 @@
+export default function (changes) {
+
+    if (changes == 'plus') {
+        this.speed += 100;
+    } else if (this.speed >= 200 && changes == 'minus') {
+        this.speed -= 100;
+    }
+
+    if (this.isPlay) {
+        this.stop();
+        this.run();
+    }
+
+};

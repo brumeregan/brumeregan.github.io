@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THE Game</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+
+            text-align: center;
+        }
+
+        input[type='button'] {
+            padding: 5px 20px;
+            margin: 0 5px;
+
+            border: 1px solid #c5d9f9;
+            border-radius: 4px;
+
+            background-color: #dbe8ff;
+
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+
+<form>
+    <input type="button" value="run" id="start">
+    <input type="button" value="pause" id="pause">
+    <input type="button" value="stop" id="stop">
+
+    <div id="speed">
+        <input type="button" value="-" id="speed-minus" data-speed="minus">
+        <span id="current-speed">100</span>
+        <input type="button" value="+" id="speed-plus" data-speed="plus">
+    </div>
+
+    <input type="button" value="random" id="random">
+</form>
+
+<canvas id="game"></canvas>
+
+<script src="build/main.js"></script>
+</body>
+</html>

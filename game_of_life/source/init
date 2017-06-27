@@ -1,0 +1,7 @@
+import to2x from './array.to2x';
+
+Array.prototype.to2x = to2x;
+
+export default function () {
+    this.universe = new Array().to2x(this.width, this.height, false);
+};

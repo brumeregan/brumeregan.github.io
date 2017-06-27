@@ -1,0 +1,4 @@
+export default function () {
+    clearInterval(this.playingGame);
+    this.isPlay = false;
+};

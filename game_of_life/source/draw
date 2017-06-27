@@ -1,0 +1,18 @@
+export default function () {
+    var ctx = document.getElementById('game');
+    var context = ctx.getContext('2d');
+
+    // Drawing cell with needed dimensions.
+    context.canvas.width = this.width * this.cellWidth;
+    context.canvas.height = this.height * this.cellWidth;
+
+    for (var y = 0; y < this.width; y++) {
+        for (var x = 0; x < this.height; x++){
+            if (this.universe[y][x]) {
+                var coordY = y * this.cellWidth;
+                var coordX = x * this.cellWidth;
+                context.fillRect(coordX, coordY, this.cellWidth, this.cellWidth);
+            }
+        }
+    }
+};

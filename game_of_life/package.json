@@ -1,0 +1,12 @@
+{
+  "name": "Game_of_life",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}
